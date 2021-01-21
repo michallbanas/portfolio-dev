@@ -214,6 +214,7 @@ mark {
   background-color: var(--white-color);
   display: grid;
   place-content: center;
+  padding: 10vh;
   
 }
 
@@ -224,6 +225,9 @@ mark {
 .about-design {
   color: var(--black-font-color);
   font-size: 1rem;
+  text-align: left;
+  display: flex;
+  place-content: center;
 }
 
 
@@ -273,8 +277,21 @@ mark {
     display: none; 
   } // zruší zlomy v responzívnej verzii
 
+  .design {
+    padding: 0;
+  }
+
+  .h-design {
+    padding: 10vh 0 0 0;
+  }
+
+  .about-design {
+    padding: 0 10vh;
+  }
+
   .design-gallery {
     grid-template-columns: 1fr;
     padding: 0%;
+    
   }
 }

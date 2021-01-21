@@ -171,14 +171,18 @@ mark {
 .design {
   background-color: var(--white-color);
   display: grid;
-  place-content: center; }
+  place-content: center;
+  padding: 10vh; }
 
 .h-design {
   color: var(--black-font-color); }
 
 .about-design {
   color: var(--black-font-color);
-  font-size: 1rem; }
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  place-content: center; }
 
 .design-gallery {
   list-style: none;
@@ -208,6 +212,12 @@ mark {
     text-align: left; }
   br {
     display: none; }
+  .design {
+    padding: 0; }
+  .h-design {
+    padding: 10vh 0 0 0; }
+  .about-design {
+    padding: 0 10vh; }
   .design-gallery {
     grid-template-columns: 1fr;
     padding: 0%; } }
