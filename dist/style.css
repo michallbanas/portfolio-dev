@@ -1,0 +1,213 @@
+@charset "UTF-8";
+:root {
+  font-size: 1.25rem;
+  --black-font-color: #222831;
+  --light-black-color: #393e46;
+  --yellow-color: #ffd369;
+  --white-color: #eeeeee; }
+
+/* Color Themes */
+[data-theme="1"] {
+  --black-font-color: #222831;
+  --light-black-color: #393e46;
+  --yellow-color: #ffd369;
+  --white-color: #eeeeee; }
+
+[data-theme="2"] {
+  --black-font-color: #222831;
+  --light-black-color: #30475e;
+  --yellow-color: #f05454;
+  --white-color: #e8e8e8; }
+
+/* Body*/
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body, h1, .hero, .h-yellow {
+  transition: 0.3s ease-in;
+  transition-property: background-color, color; }
+
+/* Header*/
+.hero {
+  background-color: var(--light-black-color);
+  display: grid;
+  place-content: center;
+  padding: 10vh; }
+
+h1 {
+  color: var(--white-color);
+  text-align: center;
+  font-size: 2.5rem; }
+
+.h-yellow {
+  background-color: var(--yellow-color);
+  color: var(--light-black-color);
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem; }
+
+p {
+  color: var(--white-color);
+  font-size: 1.25rem;
+  text-align: center; }
+
+.p-2 {
+  font-size: 1rem; }
+
+/* Social Icon */
+.a-social {
+  margin: 0.5rem; }
+
+.social-top {
+  text-align: center;
+  margin-left: -0.5rem; }
+
+.twitter, .github, .instagram, .code-pen {
+  transition: transform 1s ease-in-out; }
+
+.twitter:hover, .github:hover, .instagram:hover, .code-pen:hover {
+  transform: rotate(360deg); }
+
+/* Slider */
+.slider-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .slider-div p {
+    font-size: 1rem; }
+
+.theme-switch {
+  text-align: center;
+  padding: 1.5%; }
+
+#theme {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 6px;
+  background: var(--black-font-color);
+  outline: none;
+  cursor: pointer; }
+
+#theme::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--yellow-color);
+  cursor: pointer; }
+
+/* About-H */
+.about {
+  font-size: 1rem;
+  text-align: left; }
+
+/* Gallery */
+.fotografia {
+  background-color: var(--yellow-color);
+  padding: 1% 0 5% 0; }
+
+.h-fotografia {
+  color: var(--black-font-color);
+  text-align: center; }
+
+.gallery {
+  list-style: none;
+  padding: 0 12%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; }
+
+.gallery li {
+  flex: 1 1 20rem; }
+
+.g-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+/* Articles */
+.clanky {
+  background-color: var(--black-font-color);
+  padding: 1% 0 5% 0;
+  display: grid;
+  place-content: center;
+  padding: 10vh; }
+
+.h-clanky, .about-clanky {
+  color: var(--white-color); }
+
+.about-clanky {
+  font-size: 1rem;
+  text-align: left; }
+
+mark {
+  background-color: var(--yellow-color);
+  padding: 0.8%; }
+
+.a-frontend, .a-frontend:visited {
+  background-color: var(--yellow-color);
+  color: var(--black-font-color);
+  padding: 0.2%;
+  text-decoration: none; }
+
+.clanky li {
+  list-style-type: hiragana;
+  color: var(--yellow-color); }
+
+.ul-clanky {
+  padding-left: 4%;
+  line-height: 2; }
+
+.a-clanky, .a-clanky:visited {
+  color: var(--yellow-color); }
+
+/* UX/UI Design */
+.design {
+  background-color: var(--white-color);
+  display: grid;
+  place-content: center; }
+
+.h-design {
+  color: var(--black-font-color); }
+
+.about-design {
+  color: var(--black-font-color);
+  font-size: 1rem; }
+
+.design-gallery {
+  list-style: none;
+  margin: 0;
+  padding: 5% 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.g-img-2 {
+  height: 100%;
+  width: 100%; }
+
+/* Responzívny Design */
+@media only screen and (max-width: 1024px) {
+  .design-gallery {
+    grid-template-columns: 1fr; } }
+
+@media only screen and (max-width: 600px) {
+  .slider-div {
+    justify-content: unset;
+    flex-wrap: unset; }
+  .gallery {
+    padding: 0; }
+  .about {
+    text-align: left; }
+  .about-clanky {
+    text-align: left; }
+  br {
+    display: none; }
+  .design-gallery {
+    grid-template-columns: 1fr;
+    padding: 0%; } }
