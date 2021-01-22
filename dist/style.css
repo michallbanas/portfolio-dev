@@ -20,6 +20,21 @@
   --white-color: #e8e8e8; }
 
 /* Body*/
+.before {
+  position: fixed; }
+
+.logo {
+  width: 100px;
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  fill: currentColor;
+  color: var(--white-color); }
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg); } }
+
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
@@ -39,7 +54,7 @@ body, h1, .hero, .h-yellow {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  padding: 10vh; }
+  padding: 10vh 10vh 10vh 10vh; }
 
 h1 {
   color: var(--white-color);
@@ -169,16 +184,16 @@ mark {
 
 /* UX/UI Design */
 .design {
-  background-color: var(--white-color);
+  background-color: var(--light-black-color);
   display: grid;
   place-content: center;
   padding: 10vh; }
 
 .h-design {
-  color: var(--black-font-color); }
+  color: var(--white-color); }
 
 .about-design {
-  color: var(--black-font-color);
+  color: var(--white-color);
   font-size: 1rem;
   text-align: left;
   display: flex;
@@ -194,6 +209,21 @@ mark {
 .g-img-2 {
   height: 100%;
   width: 100%; }
+
+.contact {
+  background-color: var(--yellow-color);
+  display: grid;
+  place-content: center;
+  padding: 10vh; }
+
+.h-contact {
+  color: var(--black-font-color); }
+
+footer {
+  background-color: var(--black-font-color); }
+
+.p-footer {
+  font-size: 0.85rem; }
 
 /* Responzívny Design */
 @media only screen and (max-width: 1024px) {
