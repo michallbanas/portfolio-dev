@@ -1,35 +1,43 @@
-var gulp = require('gulp');
-
-const { src, dest, watch }=require("gulp");
-const compileSass = require("gulp-sass");
+const { src, dest, watch, series } = require('gulp');
+const sass = require("gulp-sass");
 const autoprefixer = require('gulp-autoprefixer');
+const browsersync = require('browser-sync').create();
 
-// ... variables
-var autoprefixerOptions = {
-   
-  };
+var autoprefixerOptions = {};
 
-  var input = "./SCSS/**/*.scss";
-  var output = "./dist/";
-  var sassOptions = {
-    errLogToConsole: true,
-    outputStyle: 'expanded'
-  };
-
-compileSass.compiler = require("node-sass");
-
-const bundleSass = () => {
-    return src("./SCSS/**/*.scss")
-    .pipe(compileSass().on("eror", compileSass.logError))
+// Sass Task
+function scssTask(){
+  return src("./SCSS/style.scss")
+    .pipe(sass())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(dest("./dist/"));
 };
 
 
-const devWatch = () => {
-    watch("./SCSS/**/*.scss", bundleSass);
-};
+// Browsersync Tasks
+function browsersyncServe(cb){
+  browsersync.init({
+    server: {
+      baseDir: '.'
+    }
+  });
+  cb();
+}
 
+function browsersyncReload(cb){
+  browsersync.reload();
+  cb();
+}
 
-exports.bundleSass = bundleSass; 
-exports.devWatch = devWatch;
+// Watch Task
+function watchTask(){
+  watch('*.html', browsersyncReload);
+  watch([("./SCSS/style.scss")], series(scssTask, browsersyncReload));
+}
+
+// Default Gulp task
+exports.default = series(
+  scssTask,
+  browsersyncServe,
+  watchTask
+);
