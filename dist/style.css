@@ -34,6 +34,13 @@
   fill: currentColor;
   color: var(--white-color); }
 
+.logo:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: steps(3, end);
+          animation-timing-function: steps(3, end);
+  cursor: pointer; }
+
 @-webkit-keyframes rotate {
   to {
     -webkit-transform: rotate(360deg);
@@ -262,11 +269,11 @@ footer {
   font-size: 0.85rem; }
 
 /* Responzívny Design */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .design-gallery {
     grid-template-columns: 1fr; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 688px) {
   .slider-div {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
