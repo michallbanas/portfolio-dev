@@ -29,8 +29,6 @@
   
 }
 
-
-
 .logo {
   width: 100px;
   animation: rotate 1s linear infinite;
@@ -38,6 +36,13 @@
   animation-delay: calc(var(--scroll) * -1s);
   fill: currentColor;
   color: var(--white-color);
+}
+
+.logo:hover {
+  animation-play-state: running;
+  animation-timing-function: steps(3, end);
+  
+  cursor: pointer;
 }
 
 @keyframes rotate {
@@ -290,13 +295,13 @@ footer {
 
 /* Responzívny Design */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   .design-gallery {
     grid-template-columns: 1fr;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 688px) {
   .slider-div {
     justify-content: unset;
     flex-wrap: unset;
