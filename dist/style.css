@@ -1,19 +1,13 @@
 @charset "UTF-8";
 :root {
-  font-size: 1.25rem;
+  --font-primary: "Josefin Sans", sans-serif;
+  --size-primary: 1.25rem;
   --black-font-color: #222831;
   --light-black-color: #393e46;
   --yellow-color: #ffd369;
   --white-color: #eeeeee; }
 
-/* Color Themes */
-[data-theme="1"] {
-  --black-font-color: #222831;
-  --light-black-color: #393e46;
-  --yellow-color: #ffd369;
-  --white-color: #eeeeee; }
-
-[data-theme="2"] {
+:root.dark-theme {
   --black-font-color: #222831;
   --light-black-color: #30475e;
   --yellow-color: #f05454;
@@ -52,8 +46,8 @@
             transform: rotate(360deg); } }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-size: var(--size-primary);
   line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,9 +61,9 @@ body {
           box-sizing: border-box;
   scroll-behavior: smooth; }
 
-body, h1, .hero, .h-yellow {
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+body, h1, .hero, .h-yellow, .fotografia {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   -webkit-transition-property: background-color, color;
   transition-property: background-color, color; }
 
@@ -78,12 +72,12 @@ body, h1, .hero, .h-yellow {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  padding: 10vh 10vh 10vh 10vh; }
+  padding: 5vh 10vh 10vh 10vh; }
 
 h1 {
   color: var(--white-color);
   text-align: center;
-  font-size: 2.5rem; }
+  font-size: 4rem; }
 
 .h-yellow {
   background-color: var(--yellow-color);
@@ -92,7 +86,7 @@ h1 {
 
 p {
   color: var(--white-color);
-  font-size: 1.25rem;
+  font-size: var(--size-primary);
   text-align: center; }
 
 .p-2 {
@@ -130,13 +124,13 @@ p {
       -ms-flex-pack: center;
           justify-content: center; }
   .slider-div p {
-    font-size: 1rem; }
+    font-size: var(--size-primary); }
 
 .theme-switch {
   text-align: center;
   padding: 1.5%; }
 
-#theme {
+.theme-slider {
   -webkit-appearance: none;
   width: 50%;
   height: 6px;
@@ -144,7 +138,7 @@ p {
   outline: none;
   cursor: pointer; }
 
-#theme::-webkit-slider-thumb {
+.theme-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 16px;
@@ -154,27 +148,25 @@ p {
 
 /* About-H */
 .about {
-  font-size: 1rem;
+  font-size: var(--size-primary);
   text-align: left; }
 
 /* Gallery */
 .fotografia {
   background-color: var(--yellow-color);
-  padding: 1% 0 5% 0; }
+  padding: 5vh 10vh 10vh 10vh; }
 
 .h-fotografia {
-  color: var(--black-font-color);
-  text-align: center; }
+  color: var(--black-font-color); }
 
 .gallery {
   list-style: none;
-  padding: 0 12%;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  padding: 1% 10% 5%; }
 
 .gallery li {
   -webkit-box-flex: 1;
@@ -190,16 +182,15 @@ p {
 /* Articles */
 .clanky {
   background-color: var(--black-font-color);
-  padding: 1% 0 5% 0;
   display: grid;
   place-content: center;
-  padding: 10vh; }
+  padding: 5vh 10vh 10vh 10vh; }
 
 .h-clanky, .about-clanky {
   color: var(--white-color); }
 
 .about-clanky {
-  font-size: 1rem;
+  font-size: var(--size-primary);
   text-align: left; }
 
 mark {
@@ -228,14 +219,14 @@ mark {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  padding: 10vh; }
+  padding: 5vh 10vh 10vh 10vh; }
 
 .h-design {
   color: var(--white-color); }
 
 .about-design {
   color: var(--white-color);
-  font-size: 1rem;
+  font-size: var(--size-primary);
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,24 +235,67 @@ mark {
 
 .design-gallery {
   list-style: none;
-  margin: 0;
-  padding: 5% 12%;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  padding: 1% 10% 5%; }
 
 .g-img-2 {
   height: 100%;
   width: 100%; }
 
+/* Kontakt */
 .contact {
   background-color: var(--yellow-color);
   display: grid;
   place-content: center;
-  padding: 10vh; }
+  padding: 5vh 10vh 10vh 10vh; }
 
 .h-contact {
   color: var(--black-font-color); }
 
+#kontakt-form {
+  padding: 1vh; }
+
+fieldset {
+  border: none; }
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 3%;
+  margin: 1% 0 3%;
+  resize: vertical;
+  font-family: var(--font-primary);
+  border-color: var(--black-font-color);
+  border-width: 2px;
+  background-color: var(--white-color);
+  color: var(--light-black-color); }
+
+input[type=submit] {
+  padding: 3%;
+  font-family: var(--font-primary);
+  width: 20%;
+  border-color: var(--light-black-color);
+  border-style: none;
+  background-color: var(--light-black-color);
+  color: var(--white-color);
+  cursor: pointer; }
+
+::-webkit-input-placeholder {
+  font-family: var(--font-primary); }
+
+::-moz-placeholder {
+  font-family: var(--font-primary); }
+
+:-ms-input-placeholder {
+  font-family: var(--font-primary); }
+
+::-ms-input-placeholder {
+  font-family: var(--font-primary); }
+
+::placeholder {
+  font-family: var(--font-primary); }
+
+/* Footer*/
 footer {
   background-color: var(--black-font-color); }
 
@@ -269,23 +303,45 @@ footer {
   font-size: 0.85rem; }
 
 /* Responzívny Design */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
+  .design {
+    padding: 5% 0; }
+  .about-design {
+    padding: 0 10vh; }
   .design-gallery {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr;
+    padding: 0; }
+  .fotografia {
+    padding: 5% 0; }
+  .gallery {
+    padding: 0; }
+  br {
+    display: none; } }
 
 @media only screen and (max-width: 688px) {
+  .before {
+    display: none; }
+  .hero {
+    padding: 0 6vh; }
   .slider-div {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
     -ms-flex-wrap: unset;
         flex-wrap: unset; }
+  .fotografia {
+    padding: 5% 0; }
   .gallery {
     padding: 0; }
   .about {
     text-align: left; }
+  .clanky {
+    padding: 0; }
   .about-clanky {
+    padding: 0 6vh;
     text-align: left; }
+  .ul-clanky {
+    padding-left: 20%; }
   br {
     display: none; }
   .design {
@@ -293,7 +349,8 @@ footer {
   .h-design {
     padding: 10vh 0 0 0; }
   .about-design {
-    padding: 0 10vh; }
+    padding: 0 6vh;
+    text-align: left; }
   .design-gallery {
     grid-template-columns: 1fr;
     padding: 0%; } }
