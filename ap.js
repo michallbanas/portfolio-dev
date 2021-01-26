@@ -1,31 +1,12 @@
-const slider = document.querySelector(".theme-slider");
+// Theme-Slider
 
-const setThemeValue = (value) => {
-  document.body.dataset.theme = value;
-  slider.value = value;
-};
+const btn = document.querySelector(".theme-slider");
 
-const getThemeValue = () => {
-  if (localStorage.theme) {
-    setThemeValue(localStorage.theme);
-    return;
-  }
-  if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-    setThemeValue(1);
-  }
-};
-
-document.body.removeAttribute("data-no-js");
-
-getThemeValue();
-setTimeout(() => document.body.style.setProperty("--duration", "200ms"), 1000);
-
-slider.addEventListener("input", () => {
-  setThemeValue(slider.value);
-  localStorage.setItem("theme", slider.value);
+btn.addEventListener("change", function () {
+  document.documentElement.classList.toggle("dark-theme");
 });
 
-
+// Scrolling-animation
 
 window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
