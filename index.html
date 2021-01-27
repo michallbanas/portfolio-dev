@@ -135,16 +135,21 @@
         </section>
         <section class="contact">
             <h1 class="h-contact">Kontakt</h1>
-            <p class="p-contact"></p>
-            <form id="kontakt-form" action="mailto:banas.michal@icloud.com">
+            <div>
+                <p></p>
+                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="michallbanas" data-color="#ffd369" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#222831" data-font-color="#222831" data-coffee-color="#eeeeee" ></script>
+            </div>
+            <form id="kontakt-form" method="post" action="mail.php" >
                 <fieldset>
                     <label for="Meno">
-                        <input placeholder="Meno" type="text" required >
+                        <input name="meno" placeholder="Meno" type="text" required >
                     </label>
+                    <label for="Email"></label>
+                        <input type="text" name="email" placeholder="E-mail">
                     <label for="Správa">
-                        <textarea placeholder="Napíš niečo" name="Správa" id="Message" cols="30" rows="10" required></textarea>
+                        <textarea placeholder="Napíš niečo" name="správa" id="Message" cols="30" rows="10" required></textarea>
                     </label>
-                    <input type="submit" value="Poslať">
+                    <input name="submit" type="submit" value="Poslať">
                 </fieldset>
 
             </form>
