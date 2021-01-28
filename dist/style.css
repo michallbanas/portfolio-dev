@@ -63,8 +63,10 @@ body {
 
 body, h1, .hero, .h-yellow, .fotografia {
   -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
   -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
   transition-property: background-color, color; }
 
 /* Header*/
@@ -103,6 +105,7 @@ p {
 .twitter, .github, .instagram, .code-pen {
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out; }
 
@@ -253,17 +256,35 @@ mark {
 .h-contact {
   color: var(--black-font-color); }
 
+.p-contact {
+  color: var(--black-font-color);
+  text-align: left; }
+
+.coffee, .coffee:visited {
+  color: var(--black-font-color); }
+
 #kontakt-form {
-  padding: 1vh; }
+  margin-top: 1em; }
 
 fieldset {
-  border: none; }
+  border: none;
+  margin: 0;
+  padding: 0; }
 
-input[type=text], textarea {
+#Meno, #Správa {
   width: 100%;
-  padding: 3%;
-  margin: 1% 0 3%;
-  resize: vertical;
+  padding: 1.5em 0 1.5em 0.8em;
+  margin: 0.5em 0 1em;
+  font-family: var(--font-primary);
+  border-color: var(--black-font-color);
+  border-width: 2px;
+  background-color: var(--white-color);
+  color: var(--light-black-color); }
+
+input[type=email] {
+  width: 100%;
+  padding: 1.5em 0 1.5em 0.8em;
+  margin: 0.5em 0 1em;
   font-family: var(--font-primary);
   border-color: var(--black-font-color);
   border-width: 2px;
@@ -271,7 +292,7 @@ input[type=text], textarea {
   color: var(--light-black-color); }
 
 input[type=submit] {
-  padding: 3%;
+  padding: 1.5em 0 1.5em 0.8em;
   font-family: var(--font-primary);
   width: 20%;
   border-color: var(--light-black-color);
@@ -279,6 +300,23 @@ input[type=submit] {
   background-color: var(--light-black-color);
   color: var(--white-color);
   cursor: pointer; }
+
+.error-message {
+  display: none;
+  font-weight: bold;
+  color: #f05454; }
+
+.valid-input:focus {
+  outline: none; }
+
+.valid-input:not(:focus):invalid {
+  border-color: #f05454; }
+
+.valid-input:not(:focus):invalid ~ .error-message {
+  display: block; }
+
+.valid-input:not(:focus):valid {
+  border-color: var(--light-black-color); }
 
 ::-webkit-input-placeholder {
   font-family: var(--font-primary); }
@@ -297,10 +335,21 @@ input[type=submit] {
 
 /* Footer*/
 footer {
-  background-color: var(--black-font-color); }
+  background-color: var(--black-font-color);
+  padding: 2% 0 1% 0;
+  display: grid;
+  place-content: center; }
 
-.p-footer {
-  font-size: 0.85rem; }
+.p-footer, .p-footer-2 {
+  font-size: 1rem; }
+
+/* Thank You */
+.contact-thank {
+  background-color: var(--yellow-color);
+  padding: 20% 0 20%; }
+
+.h-contact-thank {
+  color: var(--black-font-color); }
 
 /* Responzívny Design */
 @media only screen and (max-width: 1024px) {
