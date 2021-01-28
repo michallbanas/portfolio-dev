@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michal Banaš - Portfolio</title>
+    <title>Michal Banaš - Front End, UX/UI Design, Fotografia</title>
+    <meta name="description" content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa."> 
+    <link rel="icon" href="images/tree.png">
     <link rel="stylesheet" href="dist/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="og:title" content="Michal Banaš - Front End, UX/UI Design, Fotografia"> 
+    <meta name="og:description" content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@michall_banas">
+    <meta name="twitter:tittle" content="Michal Banaš - Front End, UX/UI Design, Fotografia">
+    <meta name="twitter:description" content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa.">
 </head>
 
 <body>
@@ -135,19 +143,21 @@
         </section>
         <section class="contact">
             <h1 class="h-contact">Kontakt</h1>
-            <div>
-                <p></p>
-                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="michallbanas" data-color="#ffd369" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#222831" data-font-color="#222831" data-coffee-color="#eeeeee" ></script>
-            </div>
+            <p class="p-contact">Žijeme v zvláštnych časoch, v ktorých sa osobný kontakt minimalizoval <br>
+                                 a komunikujeme viac online. V prípade akýchkoľvek otázok alebo záujmu <br>
+                                 o spoluprácu ma môžete kontaktovať formulárom nižšie. Ak by ste ma chceli <br>
+                                podporiť, tak mi môžete <a class="coffee" href="https://www.buymeacoffee.com/michallbanas" target="blank">kúpiť kávu ☕</a> </p>
             <form id="kontakt-form" method="post" action="mail.php" >
                 <fieldset>
-                    <label for="Meno">
-                        <input name="meno" placeholder="Meno" type="text" required >
+                    <label for="Meno"> Meno
+                        <input id="Meno" name="Meno" placeholder="Meno" type="text" >
                     </label>
-                    <label for="Email"></label>
-                        <input type="text" name="email" placeholder="E-mail">
-                    <label for="Správa">
-                        <textarea placeholder="Napíš niečo" name="správa" id="Message" cols="30" rows="10" required></textarea>
+                    <label for="Email"> Email
+                        <input id="Email" class="valid-input" type="email" name="Email" placeholder="E-mail" maxlength="40" >
+                        <p class="error-message">Zadajte správny formát e-mailovej adresy</p>
+                    </label>
+                    <label for="Správa"> Správa
+                        <textarea id="Správa" placeholder="Napíš niečo" name="Správa" id="Message" cols="30" rows="10"></textarea>
                     </label>
                     <input name="submit" type="submit" value="Poslať">
                 </fieldset>
@@ -159,8 +169,8 @@
     </main>
 
     <footer>
-        <p class="p-footer">Vyrobené zo ♡</p>
-
+        <p class="p-footer">Kód tejto stránky bol napísaný zo ♡</p>
+        <p class="p-footer-2">©2021 Michal Banaš</p>
     </footer>
 
     <script src="ap.js"></script>
