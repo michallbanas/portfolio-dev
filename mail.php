@@ -1,14 +1,19 @@
-<?php
-//get data from form  
-$meno = $_POST['meno'];
-$email = $_POST['email'];
-$správa= $_POST['správa'];
-$to = "banas.michal@icloud.com";
-$subject = "skuska";
-$txt ="Meno = ". $meno . "\r\n  Správa =" . $správa;
-$headers = "From: noreply@yoursite.com" . "\r\n" .
-"CC: somebodyelse@example.com";
-    mail($to,$subject,$txt,$headers);
-//redirect
-header("Location:thankyou.html");
+<?php 
+if(isset($_POST['submit'])){
+    $to = "banas.michal@icloud.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['meno'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $správa = $name . " " . "\n\n" . $_POST['správa'];
+    $správa2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['správa'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$správa,$headers);
+    mail($from,$subject2,$správa2,$headers2); // sends a copy of the message to the sender
+    header("Location:thankyou.html");
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    // You cannot use header and echo together. It's one or the other.
+    }
 ?>
