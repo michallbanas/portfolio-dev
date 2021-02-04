@@ -5,13 +5,15 @@
   --black-font-color: #222831;
   --light-black-color: #393e46;
   --yellow-color: #ffd369;
-  --white-color: #eeeeee; }
+  --white-color: #eeeeee;
+  --error-color: #f05454; }
 
 :root.dark-theme {
   --black-font-color: #222831;
   --light-black-color: #30475e;
   --yellow-color: #f05454;
-  --white-color: #e8e8e8; }
+  --white-color: #e8e8e8;
+  --error-color: #ffd369; }
 
 /* Body*/
 .before {
@@ -61,7 +63,11 @@ body {
           box-sizing: border-box;
   scroll-behavior: smooth; }
 
-body, h1, .hero, .h-yellow, .fotografia {
+body,
+h1,
+.hero,
+.h-yellow,
+.fotografia {
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
@@ -102,14 +108,20 @@ p {
   text-align: center;
   margin-left: -0.5rem; }
 
-.twitter, .github, .instagram, .code-pen {
+.twitter,
+.github,
+.instagram,
+.code-pen {
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   -o-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out; }
 
-.twitter:hover, .github:hover, .instagram:hover, .code-pen:hover {
+.twitter:hover,
+.github:hover,
+.instagram:hover,
+.code-pen:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg); }
 
@@ -189,7 +201,8 @@ p {
   place-content: center;
   padding: 5vh 10vh 10vh 10vh; }
 
-.h-clanky, .about-clanky {
+.h-clanky,
+.about-clanky {
   color: var(--white-color); }
 
 .about-clanky {
@@ -200,7 +213,8 @@ mark {
   background-color: var(--yellow-color);
   padding: 0.8%; }
 
-.a-frontend, .a-frontend:visited {
+.a-frontend,
+.a-frontend:visited {
   background-color: var(--yellow-color);
   color: var(--black-font-color);
   padding: 0.2%;
@@ -214,7 +228,8 @@ mark {
   padding-left: 4%;
   line-height: 2; }
 
-.a-clanky, .a-clanky:visited {
+.a-clanky,
+.a-clanky:visited {
   color: var(--yellow-color); }
 
 /* UX/UI Design */
@@ -260,7 +275,8 @@ mark {
   color: var(--black-font-color);
   text-align: left; }
 
-.coffee, .coffee:visited {
+.coffee,
+.coffee:visited {
   color: var(--black-font-color); }
 
 #kontakt-form {
@@ -271,7 +287,8 @@ fieldset {
   margin: 0;
   padding: 0; }
 
-#Meno, #Správa {
+#Meno,
+#Správa {
   width: 100%;
   padding: 1.5em 0 1.5em 0.8em;
   margin: 0.5em 0 1em;
@@ -281,7 +298,7 @@ fieldset {
   background-color: var(--white-color);
   color: var(--light-black-color); }
 
-input[type=email] {
+input[type="email"] {
   width: 100%;
   padding: 1.5em 0 1.5em 0.8em;
   margin: 0.5em 0 1em;
@@ -291,7 +308,7 @@ input[type=email] {
   background-color: var(--white-color);
   color: var(--light-black-color); }
 
-input[type=submit] {
+input[type="submit"] {
   padding: 1.5em 0 1.5em 0.8em;
   font-family: var(--font-primary);
   width: 20%;
@@ -304,13 +321,13 @@ input[type=submit] {
 .error-message {
   display: none;
   font-weight: bold;
-  color: #f05454; }
+  color: var(--error-color); }
 
 .valid-input:focus {
   outline: none; }
 
 .valid-input:not(:focus):invalid {
-  border-color: #f05454; }
+  border-color: var(--error-color); }
 
 .valid-input:not(:focus):invalid ~ .error-message {
   display: block; }
@@ -340,7 +357,8 @@ footer {
   display: grid;
   place-content: center; }
 
-.p-footer, .p-footer-2 {
+.p-footer,
+.p-footer-2 {
   font-size: 1rem; }
 
 /* Thank You */
