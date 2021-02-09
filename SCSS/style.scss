@@ -1,19 +1,29 @@
 :root {
+  /* Typography*/
+
   --font-primary: "Josefin Sans", sans-serif;
+  --font-heading: "Playfair Display", serif;
   --size-primary: 1.25rem;
-  --black-font-color: #222831;
-  --light-black-color: #393e46;
-  --yellow-color: #ffd369;
-  --white-color: #eeeeee;
-  --error-color: #f05454;
+  --size-secondary: 1.953rem;
+  --size-heading: 4.768rem;
+
+  /* Colors*/
+
+  --header-color: #262223;
+  --light-black-color: #4c5954;
+  --yellow-color: #efb339;
+  --light-yellow-color: #f1c989;
+  --white-color: #f1f0f1;
+  --error-color: #a6384c;
 }
 
 :root.dark-theme {
-  --black-font-color: #222831;
-  --light-black-color: #30475e;
-  --yellow-color: #f05454;
-  --white-color: #e8e8e8;
-  --error-color: #ffd369;
+  --header-color: #0d0d0d;
+  --light-black-color: #4c5954;
+  --yellow-color: #a6384c;
+  --light-yellow-color: #bf9a78;
+  --white-color: #f1f0f1;
+  --error-color: #efb339;
 }
 
 /* Body*/
@@ -46,7 +56,7 @@
 body {
   font-family: var(--font-primary);
   font-size: var(--size-primary);
-  line-height: 1.5;
+  line-height: 1.75;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -66,22 +76,24 @@ h1,
 /* Header*/
 
 .hero {
-  background-color: var(--light-black-color);
+  background-color: var(--header-color);
   display: grid;
   place-content: center;
   padding: 5vh 10vh 10vh 10vh;
 }
 
 h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
   color: var(--white-color);
   text-align: center;
-  font-size: 4rem;
+  font-size: var(--size-heading);
 }
 
 .h-yellow {
   background-color: var(--yellow-color);
-  color: var(--light-black-color);
-  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  color: var(--header-color);
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
 }
 
 p {
@@ -91,18 +103,27 @@ p {
 }
 
 .p-2 {
-  font-size: 1rem;
+  font-size: var(--size-secondary);
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.p-3 {
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
 }
 
 /* Social Icon */
 
 .a-social {
-  margin: 0.5rem;
+  margin: 1rem;
+  align-self: center;
 }
 
 .social-top {
-  text-align: center;
-  margin-left: -0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .twitter,
@@ -110,6 +131,7 @@ p {
 .instagram,
 .code-pen {
   transition: transform 1s ease-in-out;
+  vertical-align: middle;
 }
 
 .twitter:hover,
@@ -141,7 +163,7 @@ p {
   -webkit-appearance: none;
   width: 50%;
   height: 6px;
-  background: var(--black-font-color);
+  background: var(--light-black-color);
   outline: none;
   cursor: pointer;
 }
@@ -170,7 +192,7 @@ p {
 }
 
 .h-fotografia {
-  color: var(--black-font-color);
+  color: var(--header-color);
 }
 
 .gallery {
@@ -193,7 +215,7 @@ p {
 /* Articles */
 
 .clanky {
-  background-color: var(--black-font-color);
+  background-color: var(--header-color);
   display: grid;
   place-content: center;
   padding: 5vh 10vh 10vh 10vh;
@@ -217,7 +239,7 @@ mark {
 .a-frontend,
 .a-frontend:visited {
   background-color: var(--yellow-color);
-  color: var(--black-font-color);
+  color: var(--header-color);
   padding: 0.2%;
   text-decoration: none;
 }
@@ -280,17 +302,17 @@ mark {
 }
 
 .h-contact {
-  color: var(--black-font-color);
+  color: var(--header-color);
 }
 
 .p-contact {
-  color: var(--black-font-color);
+  color: var(--header-color);
   text-align: left;
 }
 
 .coffee,
 .coffee:visited {
-  color: var(--black-font-color);
+  color: var(--header-color);
 }
 
 #kontakt-form {
@@ -309,7 +331,7 @@ fieldset {
   padding: 1.5em 0 1.5em 0.8em;
   margin: 0.5em 0 1em;
   font-family: var(--font-primary);
-  border-color: var(--black-font-color);
+  border-color: var(--header-color);
   border-width: 2px;
   background-color: var(--white-color);
   color: var(--light-black-color);
@@ -320,7 +342,7 @@ input[type="email"] {
   padding: 1.5em 0 1.5em 0.8em;
   margin: 0.5em 0 1em;
   font-family: var(--font-primary);
-  border-color: var(--black-font-color);
+  border-color: var(--header-color);
   border-width: 2px;
   background-color: var(--white-color);
   color: var(--light-black-color);
@@ -365,7 +387,7 @@ input[type="submit"] {
 /* Footer*/
 
 footer {
-  background-color: var(--black-font-color);
+  background-color: var(--header-color);
   padding: 2% 0 1% 0;
   display: grid;
   place-content: center;
@@ -384,7 +406,7 @@ footer {
 }
 
 .h-contact-thank {
-  color: var(--black-font-color);
+  color: var(--header-color);
 }
 
 /* Responzívny Design */
@@ -422,6 +444,10 @@ footer {
 
   .hero {
     padding: 0 6vh;
+  }
+
+  h1 {
+    font-size: 3.815rem;
   }
 
   .slider-div {
