@@ -7,7 +7,7 @@
   --size-secondary: 1.953rem;
   --size-heading: 4.768rem;
 
-  /* Colors*/
+  /* Hard Sun*/
 
   --header-color: #262223;
   --light-black-color: #4c5954;
@@ -16,6 +16,8 @@
   --white-color: #f1f0f1;
   --error-color: #a6384c;
 }
+
+/* Dark Wine*/
 
 :root.dark-theme {
   --header-color: #0d0d0d;
@@ -245,12 +247,13 @@ mark {
 }
 
 .clanky li {
-  list-style-type: hiragana;
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
   color: var(--yellow-color);
 }
 
 .ul-clanky {
-  padding-left: 4%;
+  padding-inline-start: 0;
   line-height: 2;
 }
 
