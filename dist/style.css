@@ -105,20 +105,22 @@ h1 {
 p {
   color: var(--white-color);
   font-size: var(--size-primary);
-  text-align: center; }
+  max-width: 37.5em; }
 
 .p-2 {
   font-size: var(--size-secondary);
   -webkit-margin-before: 0.5em;
           margin-block-start: 0.5em;
   -webkit-margin-after: 0.5em;
-          margin-block-end: 0.5em; }
+          margin-block-end: 0.5em;
+  text-align: center; }
 
 .p-3 {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0.5em;
-          margin-block-end: 0.5em; }
+          margin-block-end: 0.5em;
+  text-align: center; }
 
 /* Social Icon */
 .a-social {
@@ -193,7 +195,7 @@ p {
 /* About-H */
 .about {
   font-size: var(--size-primary);
-  text-align: left; }
+  text-align: justify; }
 
 /* Gallery */
 .fotografia {
@@ -228,6 +230,7 @@ p {
   background-color: var(--header-color);
   display: grid;
   place-content: center;
+  text-align: justify;
   padding: 5vh 10vh 10vh 10vh; }
 
 .h-clanky,
@@ -235,8 +238,7 @@ p {
   color: var(--white-color); }
 
 .about-clanky {
-  font-size: var(--size-primary);
-  text-align: left; }
+  font-size: var(--size-primary); }
 
 mark {
   background-color: var(--yellow-color);
@@ -268,19 +270,18 @@ mark {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  padding: 5vh 10vh 10vh 10vh; }
+  text-align: justify;
+  padding: 5vh 10vh 0 10vh; }
 
 .h-design {
   color: var(--white-color); }
 
 .about-design {
-  color: var(--white-color);
-  font-size: var(--size-primary);
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center; }
+  color: var(--white-color); }
+
+.gallery-design {
+  background-color: var(--light-black-color);
+  padding: 1vh 10vh 10vh 10vh; }
 
 .design-gallery {
   list-style: none;
@@ -297,89 +298,48 @@ mark {
   background-color: var(--yellow-color);
   display: grid;
   place-content: center;
+  text-align: justify;
   padding: 5vh 10vh 10vh 10vh; }
 
 .h-contact {
   color: var(--header-color); }
 
 .p-contact {
-  color: var(--header-color);
-  text-align: left; }
-
-.coffee,
-.coffee:visited {
   color: var(--header-color); }
 
-#kontakt-form {
-  margin-top: 1em; }
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 5vh 0; }
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0; }
-
-#Meno,
-#Správa {
-  width: 100%;
-  padding: 1.5em 0 1.5em 0.8em;
-  margin: 0.5em 0 1em;
-  font-family: var(--font-primary);
-  border-color: var(--header-color);
-  border-width: 2px;
-  background-color: var(--white-color);
-  color: var(--light-black-color); }
-
-input[type="email"] {
-  width: 100%;
-  padding: 1.5em 0 1.5em 0.8em;
-  margin: 0.5em 0 1em;
-  font-family: var(--font-primary);
-  border-color: var(--header-color);
-  border-width: 2px;
-  background-color: var(--white-color);
-  color: var(--light-black-color); }
-
-input[type="submit"] {
-  padding: 1.5em 0 1.5em 0.8em;
-  font-family: var(--font-primary);
-  width: 20%;
-  border-color: var(--light-black-color);
-  border-style: none;
-  background-color: var(--light-black-color);
+.mail,
+.mail-c {
+  display: inline;
+  text-decoration: none;
   color: var(--white-color);
-  cursor: pointer; }
+  background-color: var(--header-color);
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  font-family: "Cookie", cursive;
+  font-size: 1.8rem; }
 
-.error-message {
-  display: none;
-  font-weight: bold;
-  color: var(--error-color); }
+.bmc {
+  height: 2rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+  padding-bottom: 2%; }
 
-.valid-input:focus {
-  outline: none; }
-
-.valid-input:not(:focus):invalid {
-  border-color: var(--error-color); }
-
-.valid-input:not(:focus):invalid ~ .error-message {
-  display: block; }
-
-.valid-input:not(:focus):valid {
-  border-color: var(--light-black-color); }
-
-::-webkit-input-placeholder {
-  font-family: var(--font-primary); }
-
-::-moz-placeholder {
-  font-family: var(--font-primary); }
-
-:-ms-input-placeholder {
-  font-family: var(--font-primary); }
-
-::-ms-input-placeholder {
-  font-family: var(--font-primary); }
-
-::placeholder {
-  font-family: var(--font-primary); }
+.eml {
+  height: 1.8rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+  padding-bottom: 2%; }
 
 /* Footer*/
 footer {
@@ -390,7 +350,8 @@ footer {
 
 .p-footer,
 .p-footer-2 {
-  font-size: 1rem; }
+  font-size: 1rem;
+  text-align: center; }
 
 /* Thank You */
 .contact-thank {
@@ -420,7 +381,7 @@ footer {
   .before {
     display: none; }
   .hero {
-    padding: 0 6vh; }
+    padding: 0 5%; }
   h1 {
     font-size: 3.815rem; }
   .slider-div {
@@ -438,10 +399,12 @@ footer {
   .clanky {
     padding: 0; }
   .about-clanky {
-    padding: 0 6vh;
-    text-align: left; }
+    padding: 0 5%;
+    text-align: justify; }
   .ul-clanky {
-    padding-left: 20%; }
+    padding-left: 5%; }
+  .contact {
+    padding: 0 5% 5%; }
   br {
     display: none; }
   .design {
@@ -449,8 +412,16 @@ footer {
   .h-design {
     padding: 10vh 0 0 0; }
   .about-design {
-    padding: 0 6vh;
-    text-align: left; }
+    padding: 0 5%;
+    text-align: justify; }
+  .gallery-design {
+    padding: 5vh 0; }
   .design-gallery {
-    grid-template-columns: 1fr;
-    padding: 0%; } }
+    grid-template-columns: 1fr; }
+  .mail {
+    margin-top: 5vh; } }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .grid-safari {
+      margin-bottom: -4%; } } }
