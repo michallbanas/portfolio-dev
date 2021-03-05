@@ -92,6 +92,14 @@ h1 {
   font-size: var(--size-heading);
 }
 
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--size-heading);
+}
+
 .h-yellow {
   background-color: var(--yellow-color);
   color: var(--header-color);
@@ -106,15 +114,13 @@ p {
 
 .p-2 {
   font-size: var(--size-secondary);
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
   text-align: center;
+  margin-block-end: 0;
 }
 
 .p-3 {
-  margin-block-start: 0;
-  margin-block-end: 0.5em;
   text-align: center;
+  margin-block-start: 0;
 }
 
 /* Social Icon */
@@ -167,9 +173,10 @@ p {
   -webkit-appearance: none;
   width: 50%;
   height: 6px;
+  margin-bottom: 18px;
   background: var(--light-black-color);
-  outline: none;
   cursor: pointer;
+  outline: none;
 }
 
 .theme-slider::-webkit-slider-thumb {
@@ -427,10 +434,6 @@ footer {
 
   .gallery {
     padding: 0;
-  }
-
-  .about {
-    text-align: left;
   }
 
   .clanky {

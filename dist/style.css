@@ -97,6 +97,13 @@ h1 {
   text-align: center;
   font-size: var(--size-heading); }
 
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--size-heading); }
+
 .h-yellow {
   background-color: var(--yellow-color);
   color: var(--header-color);
@@ -109,18 +116,14 @@ p {
 
 .p-2 {
   font-size: var(--size-secondary);
-  -webkit-margin-before: 0.5em;
-          margin-block-start: 0.5em;
-  -webkit-margin-after: 0.5em;
-          margin-block-end: 0.5em;
-  text-align: center; }
+  text-align: center;
+  -webkit-margin-after: 0;
+          margin-block-end: 0; }
 
 .p-3 {
+  text-align: center;
   -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0.5em;
-          margin-block-end: 0.5em;
-  text-align: center; }
+          margin-block-start: 0; }
 
 /* Social Icon */
 .a-social {
@@ -180,9 +183,10 @@ p {
   -webkit-appearance: none;
   width: 50%;
   height: 6px;
+  margin-bottom: 18px;
   background: var(--light-black-color);
-  outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 .theme-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -394,8 +398,6 @@ footer {
     padding: 5% 0; }
   .gallery {
     padding: 0; }
-  .about {
-    text-align: left; }
   .clanky {
     padding: 0; }
   .about-clanky {
