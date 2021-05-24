@@ -55,6 +55,12 @@
   }
 }
 
+@-moz-document url-prefix() {
+  .before {
+    display: none;
+  }
+}
+
 body {
   font-family: var(--font-primary);
   font-size: var(--size-primary);
@@ -177,6 +183,12 @@ p {
   background: var(--light-black-color);
   cursor: pointer;
   outline: none;
+}
+
+@-moz-document url-prefix() {
+  .theme-slider {
+    margin-bottom: 3px;
+  }
 }
 
 .theme-slider::-webkit-slider-thumb {
