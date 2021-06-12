@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-dev",
+  "version": "1.0.0",
+  "description": "My first personal portfolio.",
+  "main": "ap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michallbanas/portfolio-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michallbanas/portfolio-dev/issues"
+  },
+  "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "node-sass": "^6.0.0"
+  }
+}

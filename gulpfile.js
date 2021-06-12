@@ -1,5 +1,5 @@
 const { src, dest, watch, series } = require('gulp');
-const sass = require("gulp-sass");
+const sass = require("gulp-dart-sass");
 const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
 
