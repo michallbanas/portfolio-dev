@@ -20,7 +20,7 @@
 /* Dark Wine*/
 
 :root.dark-theme {
-  --header-color: #0d0d0d;
+  --header-color: #101010;
   --light-black-color: #4c5954;
   --yellow-color: #a6384c;
   --light-yellow-color: #bf9a78;
@@ -41,12 +41,6 @@
   animation-delay: calc(var(--scroll) * -1s);
   fill: currentColor;
   color: var(--white-color);
-}
-
-.logo:hover {
-  animation-play-state: running;
-  animation-timing-function: steps(3, end);
-  cursor: pointer;
 }
 
 @keyframes rotate {
@@ -76,7 +70,8 @@ body,
 h1,
 .hero,
 .h-yellow,
-.fotografia {
+.fotografia,
+.projekty {
   transition: 0.3s ease-out;
   transition-property: background-color, color;
 } // Plynulá animácia pri prepnutí farebnej témy
@@ -200,11 +195,41 @@ p {
   cursor: pointer;
 }
 
+
+
 /* About-H */
 
 .about {
   font-size: var(--size-primary);
   text-align: justify;
+}
+
+/* Projekty */
+
+.projekty {
+  background-color: var(--yellow-color);
+  display: grid;
+  place-content: center;
+  text-align: justify;
+  padding: 5vh 10vh 10vh 10vh;
+}
+
+.h-projekty {
+  color: var(--header-color);
+}
+
+.p-projekty {
+  color: var(--header-color);
+}
+
+.u-projekty {
+  display: grid;
+  padding-inline-start: 0;
+}
+
+.a-projekty,
+.a-projekty:visited {
+  color: var(--header-color);
 }
 
 /* Gallery */
@@ -321,19 +346,15 @@ mark {
 /* Kontakt */
 
 .contact {
-  background-color: var(--yellow-color);
+  background-color: var(--light-black-color);
   display: grid;
   place-content: center;
   text-align: justify;
   padding: 5vh 10vh 10vh 10vh;
 }
 
-.h-contact {
-  color: var(--header-color);
-}
-
-.p-contact {
-  color: var(--header-color);
+.h-contact, .p-contact {
+  color: var(--white-color)
 }
 
 .links {

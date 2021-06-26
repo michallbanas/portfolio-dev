@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="sk">
   <!-- Come as you are -->
+  <!-- Safari 15 Toolbar Colors supported -->
+  <!-- Internet Exolorer is not supported, I'm sorry. -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michal Banaš - Front End, UX/UI Design, Fotografia</title>
+    <title>Michal Banaš - front-end developer</title>
     <meta
       name="description"
-      content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa."
+      content="Portfólio Michala Banaša, front-end developera."
     />
     <link rel="icon" href="images/tree.png" />
     <link rel="stylesheet" href="dist/style.css" />
@@ -23,22 +25,25 @@
     />
     <meta
       name="og:title"
-      content="Michal Banaš - Front End, UX/UI Design, Fotografia"
+      content="Michal Banaš - front-end developer"
     />
     <meta
       name="og:description"
-      content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa."
+      content="Portfólio Michala Banaša, front-end developera."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@michall_banas" />
     <meta
       name="twitter:tittle"
-      content="Michal Banaš - Front End, UX/UI Design, Fotografia"
+      content="Michal Banaš - front-end developer"
     />
     <meta
       name="twitter:description"
-      content="Portfólio Michala Banaša, front-end juniora, ux/ui dizajnéra a fotografa."
+      content="Portfólio Michala Banaša, front-end developera."
     />
+    <meta
+      name="theme-color" content="#262223"id="color-meta-tag"
+    >
   </head>
 
   <body>
@@ -280,10 +285,10 @@
       </span>
 
       <p class="p-2">
-        <strong> fotografia, front-end, web-design </strong>
+        <strong> Front end developer </strong>
       </p>
       <p class="p-3">
-        <strong> ‹ HTML • SCSS • JS • UX/UI › </strong>
+        <strong> ‹ HTML • CSS • JS • UX/UI › </strong>
       </p>
       <div class="slider-div">
         <div>
@@ -319,37 +324,32 @@
         Každý deň sa učím a vďaka tomu viem pri svojich projektoch použiť
         JavaScript, Gulp či 11ty. Okrem toho, že si rád prezerám projekty a kód
         iných na Githube, tak tam aj vytváram verzie a zálohujem projekty. Vo
-        svojom workspace využívam Codepen, Jiru, Dropxox Paper a Figmu.
+        svojom workspace využívam Codepen, Jiru, Dropxox Paper a Sketch.
       </p>
     </header>
 
     <main>
-      <section class="fotografia">
-        <h2 class="h-fotografia">Fotografia</h2>
-        <ul class="gallery">
-          <li><img class="g-img" src="images/01.jpg" alt="" /></li>
-          <li><img class="g-img" src="images/02.jpg" alt="" /></li>
-          <li><img class="g-img" src="images/03.jpg" alt="" /></li>
-          <li><img class="g-img" src="images/04.jpg" alt="" /></li>
-          <li><img class="g-img" src="images/05.jpg" alt="" /></li>
+      <section class="projekty">
+        <h2 class="h-projekty">Projekty</h2>
+        <p class="p-projekty">
+          Najlepšou radou, ktorú som si prečítal od skúsených programátorov a programátoriek,
+          bolo začať pracovať na malých projektoch. A tak som začal tvoriť také projekty, ktoré
+          som sám chcel využiť a používať. Každý projekt si môžete rozkliknúť nižšie.
+        </p>
+        <ul class="u-projekty">
+          <a class="a-projekty" href="https://michallbanas.github.io/priemerna-mzda/">01. Priemerná mzda</a>
+          <a class="a-projekty" href="https://michallbanas.github.io/password-generator/">02. Password Generator</a>
+          <a class="a-projekty" href="https://michallbanas.github.io/hra-mdn/">03. Uhádni číslo</a>
         </ul>
       </section>
+      
       <section class="clanky">
         <h2 class="h-clanky">Články</h2>
         <p class="about-clanky">
-          Do tejto chvíle som vždy písal kód pre skušobné projekty v rámci
-          učenia, napríklad z
-          <a
-            class="a-frontend"
-            href="https://www.frontendmentor.io"
-            target="blank"
-            rel="noopener noreferrer"
-            >Frontend Mentor</a
-          >, ak by ste však chceli vidieť reálnu webovú stránku, ktorú som
-          urobil tak sa ste ju práve navštívili a prehliadate si ju. Čo som sa
-          naučil a aké tipy by som odporučil si môžete prečítať nižšie v
-          nasledujúcich článkoch na mojom blogu, ktorý som vytvoril pomocou
-          Eleventy a Netlify.
+          Vždy som rád písal, či už to boli reportáže, básne alebo úvahy a rád píšem
+          aj o kóde. Čo som sa naučil a aké tipy by som odporučil si môžete prečítať 
+          nižšie v nasledujúcich článkoch na mojom blogu, ktorý som vytvoril pomocou
+          Eleventy templatu a Netlify.
         </p>
         <ul class="ul-clanky">
           <li>
@@ -372,6 +372,17 @@
               rel="noopener noreferrer"
             >
               Ako vytvoriť responzívnu navigáciu</a
+            >
+          </li>
+          <li>
+            <a 
+            class="a-clanky"
+            href="" 
+            aria-label="Ako prispôsobenie farby toolbaru v Safari 15 zmení design web-stránok" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            >
+            Ako prispôsobenie farby toolbaru v Safari 15 zmení design web-stránok</a
             >
           </li>
         </ul>
@@ -441,6 +452,16 @@
               loading="lazy"
             />
           </li>
+        </ul>
+      </section>
+      <section class="fotografia">
+        <h2 class="h-fotografia">Fotografia</h2>
+        <ul class="gallery">
+          <li><img class="g-img" src="images/01.jpg" alt="" /></li>
+          <li><img class="g-img" src="images/02.jpg" alt="" /></li>
+          <li><img class="g-img" src="images/03.jpg" alt="" /></li>
+          <li><img class="g-img" src="images/04.jpg" alt="" /></li>
+          <li><img class="g-img" src="images/05.jpg" alt="" /></li>
         </ul>
       </section>
       <section class="contact">
