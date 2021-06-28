@@ -15,6 +15,17 @@ function colorChange () {
 
 btnColorSwitcher.addEventListener("change", colorChange)
 
+// Dark Mode at the Operating System Level
+
+let darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (darkMode.matches) {
+  document.documentElement.classList.add("dark-theme");
+  btnColorSwitcher.value = 2
+} else {
+  document.documentElement.classList.remove("dark-theme");
+}
+
 // Scrolling-animation
 
 window.addEventListener('scroll', () => {
