@@ -66,16 +66,6 @@ body {
   scroll-behavior: smooth;
 }
 
-body,
-h1,
-.hero,
-.h-yellow,
-.fotografia,
-.projekty {
-  transition: 0.3s ease-out;
-  transition-property: background-color, color;
-} // Plynulá animácia pri prepnutí farebnej témy
-
 /* Header*/
 
 .hero {
@@ -470,7 +460,8 @@ footer {
   }
 
   .clanky {
-    padding: 0;
+    padding: 0 5% 0 0;
+    text-align: left;
   }
 
   .about-clanky {
