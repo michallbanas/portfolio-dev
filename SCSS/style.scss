@@ -1,3 +1,56 @@
+/* josefin-sans-regular - latin-ext */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/josefin-sans-v17-latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/josefin-sans-v17-latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* josefin-sans-700 - latin-ext */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/josefin-sans-v17-latin-ext-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/josefin-sans-v17-latin-ext-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* playfair-display-regular - latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/playfair-display-v22-latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/playfair-display-v22-latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* playfair-display-700 - latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/playfair-display-v22-latin-ext-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/playfair-display-v22-latin-ext-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* cookie-regular - latin */
+@font-face {
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/cookie-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/cookie-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   /* Typography*/
 
@@ -101,6 +154,7 @@ p {
   color: var(--white-color);
   font-size: var(--size-primary);
   max-width: 37.5em;
+  margin: auto;
 }
 
 .p-2 {
@@ -125,6 +179,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 5%;
 }
 
 .twitter,
@@ -149,6 +204,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0 0 5% 0;
 
   & p {
     font-size: var(--size-primary);
@@ -191,7 +247,7 @@ p {
 
 .about {
   font-size: var(--size-primary);
-  text-align: justify;
+  text-align: left;
 }
 
 /* Projekty */
@@ -200,8 +256,8 @@ p {
   background-color: var(--yellow-color);
   display: grid;
   place-content: center;
-  text-align: justify;
-  padding: 5vh 10vh 10vh 10vh;
+  text-align: left;
+  padding: 0 5% 5%;
 }
 
 .h-projekty {
@@ -220,6 +276,10 @@ p {
 .a-projekty,
 .a-projekty:visited {
   color: var(--header-color);
+}
+
+li {
+  list-style: none;
 }
 
 /* Gallery */
@@ -256,7 +316,7 @@ p {
   background-color: var(--header-color);
   display: grid;
   place-content: center;
-  text-align: justify;
+  text-align: left;
   padding: 5vh 10vh 10vh 10vh;
 }
 
@@ -304,7 +364,7 @@ mark {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  text-align: justify;
+  text-align: left;
   padding: 5vh 10vh 0 10vh;
 }
 
@@ -339,7 +399,7 @@ mark {
   background-color: var(--light-black-color);
   display: grid;
   place-content: center;
-  text-align: justify;
+  text-align: left;
   padding: 5vh 10vh 10vh 10vh;
 }
 
@@ -443,7 +503,11 @@ footer {
   }
 
   h1 {
-    font-size: 3.815rem;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2.5em;
   }
 
   .slider-div {
@@ -466,7 +530,7 @@ footer {
 
   .about-clanky {
     padding: 0 5%;
-    text-align: justify;
+    text-align: left;
   }
 
   .ul-clanky {
@@ -491,7 +555,7 @@ footer {
 
   .about-design {
     padding: 0 5%;
-    text-align: justify;
+    text-align: left;
   }
 
   .gallery-design {

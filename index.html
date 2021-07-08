@@ -13,16 +13,11 @@
     />
     <link rel="icon" href="images/tree.png" />
     <link rel="stylesheet" href="dist/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/josefin-sans-v17-latin-ext-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/josefin-sans-v17-latin-ext-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-v22-latin-ext-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-v22-latin-ext-700.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/cookie-v12-latin-regular.woff2" crossorigin>
     <meta
       name="og:title"
       content="Michal Banaš - front-end developer"
@@ -30,6 +25,10 @@
     <meta
       name="og:description"
       content="Portfólio Michala Banaša, front-end developera."
+    />
+    <meta
+    name="og:image"
+    content="https://www.michalbanas.dev/images/hard-sun.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@michall_banas" />
@@ -42,10 +41,10 @@
       content="Portfólio Michala Banaša, front-end developera."
     />
     <meta
-      name="theme-color" content="#262223"id="color-meta-tag"
+      name="theme-color" content="#262223" id="color-meta-tag"
     >
     <script defer data-domain="michalbanas.dev" src="https://plausible.io/js/plausible.js"></script>
-    <script type="text/javascript" async defer src="ap.js"></script>
+    <script defer src="ap.js"></script>
   </head>
 
   <body>
@@ -299,7 +298,7 @@
         </div>
 
         <div class="theme-switch">
-          <label for="theme">
+          <label for="theme" tabindex="0">
             <input
               class="theme-slider"
               id="theme"
@@ -334,14 +333,20 @@
       <section class="projekty">
         <h2 class="h-projekty">Projekty</h2>
         <p class="p-projekty">
-          Najlepšou radou, ktorú som si prečítal od skúsených programátorov a programátoriek,
+          Najlepšou radou, ktorú som si prečítal od viacerých skúsených programátorov a skúsených programátoriek,
           bolo začať pracovať na malých projektoch. A tak som začal tvoriť také projekty, ktoré
           som sám chcel využiť a používať. Každý projekt si môžete rozkliknúť nižšie.
         </p>
-        <ul class="u-projekty">
-          <a class="a-projekty" href="https://michallbanas.github.io/priemerna-mzda/">01. Priemerná mzda</a>
-          <a class="a-projekty" href="https://michallbanas.github.io/password-generator/">02. Password Generator</a>
-          <a class="a-projekty" href="https://michallbanas.github.io/hra-mdn/">03. Uhádni číslo</a>
+        <ul role="list" class="u-projekty">
+          <li>
+            <a class="a-projekty" href="https://michallbanas.github.io/priemerna-mzda/">01. Priemerná mzda</a>
+          </li>
+          <li>
+            <a class="a-projekty" href="https://michallbanas.github.io/password-generator/">02. Password Generator</a>
+          </li>
+          <li>
+            <a class="a-projekty" href="https://michallbanas.github.io/hra-mdn/">03. Uhádni číslo</a>
+          </li>
         </ul>
       </section>
       
@@ -353,7 +358,7 @@
           nižšie v nasledujúcich článkoch na mojom blogu, ktorý som vytvoril pomocou
           Eleventy templatu a Netlify.
         </p>
-        <ul class="ul-clanky">
+        <ul role="list" class="ul-clanky">
           <li>
             <a
               class="a-clanky"
@@ -362,7 +367,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Moja prvá web-stránka</a
+              Ako to celé začalo</a
             >
           </li>
           <li>
@@ -374,17 +379,6 @@
               rel="noopener noreferrer"
             >
               Ako vytvoriť responzívnu navigáciu</a
-            >
-          </li>
-          <li>
-            <a 
-            class="a-clanky"
-            href="" 
-            aria-label="Ako prispôsobenie farby toolbaru v Safari 15 zmení design web-stránok" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            >
-            Ako prispôsobenie farby toolbaru v Safari 15 zmení design web-stránok</a
             >
           </li>
         </ul>
@@ -404,61 +398,61 @@
           Adobe a hoci sú kvalifikované ako "Industry standard", tak radšej
           používam Affinity aplikácie a Figmu.
         </p>
-      </section>
-      <section class="gallery-design">
-        <ul class="design-gallery">
-          <li class="grid-safari">
-            <a
-              href="https://www.behance.net/gallery/94598785/Covid-19-App"
-              aria-label="covid app"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
+        <div class="gallery-design">
+          <ul role="list" class="design-gallery">
+            <li class="grid-safari">
+              <a
+                href="https://www.behance.net/gallery/94598785/Covid-19-App"
+                aria-label="covid app"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  class="g-img-2"
+                  src="images/covid-app.jpg"
+                  alt="covid app"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li class="grid-safari">
+              <a
+                href="https://www.behance.net/gallery/95305869/Google-Mentor"
+                aria-label="google mentor"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  class="g-img-2"
+                  src="images/mentor-app.jpg"
+                  alt="google mentor"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li class="grid-safari">
+              <a
+                href="https://www.figma.com/file/xXgE3sV2R3qDQXTIB3izjC/michal-banas-dev-portfolio?node-id=0%3A1"
+                aria-label="portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  class="g-img-2"
+                  src="images/hard-sun.jpg"
+                  alt="portfolio"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li class="grid-safari">
+              <img
                 class="g-img-2"
-                src="images/covid-app.jpg"
-                alt="covid app"
+                src="images/coming-soon.jpg"
+                alt="coming soon"
                 loading="lazy"
-            /></a>
-          </li>
-          <li class="grid-safari">
-            <a
-              href="https://www.behance.net/gallery/95305869/Google-Mentor"
-              aria-label="google mentor"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                class="g-img-2"
-                src="images/mentor-app.jpg"
-                alt="google mentor"
-                loading="lazy"
-            /></a>
-          </li>
-          <li class="grid-safari">
-            <a
-              href="https://www.figma.com/file/xXgE3sV2R3qDQXTIB3izjC/michal-banas-dev-portfolio?node-id=0%3A1"
-              aria-label="portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><img
-                class="g-img-2"
-                src="images/hard-sun.jpg"
-                alt="portfolio"
-                loading="lazy"
-            /></a>
-          </li>
-          <li class="grid-safari">
-            <img
-              class="g-img-2"
-              src="images/coming-soon.jpg"
-              alt="coming soon"
-              loading="lazy"
-            />
-          </li>
-        </ul>
+              />
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="fotografia">
         <h2 class="h-fotografia">Fotografia</h2>
-        <ul class="gallery">
+        <ul role="list" class="gallery">
           <li><img class="g-img" src="images/01.jpg" alt="Building with shadow" loading="lazy" /></li>
           <li><img class="g-img" src="images/02.jpg" alt="Pool in the night" loading="lazy" /></li>
           <li><img class="g-img" src="images/03.jpg" alt="Archtitecture with shadow" loading="lazy" /></li>
