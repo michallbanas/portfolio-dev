@@ -1,7 +1,8 @@
-const { src, dest, watch, series } = require('gulp');
-const sass = require("gulp-dart-sass");
-const autoprefixer = require('gulp-autoprefixer');
-const browsersync = require('browser-sync').create();
+const { src, dest, watch, series } = require('gulp')
+const sass = require("gulp-dart-sass")
+const autoprefixer = require('gulp-autoprefixer')
+const cssnano = require("gulp-cssnano")
+const browsersync = require('browser-sync').create()
 
 var autoprefixerOptions = {};
 
@@ -9,6 +10,7 @@ var autoprefixerOptions = {};
 function scssTask(){
   return src("./SCSS/style.scss")
     .pipe(sass())
+    .pipe(cssnano())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(dest("./dist/"));
 };
