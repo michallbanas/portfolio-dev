@@ -1,10 +1,10 @@
-const { src, dest, watch, series } = require('gulp')
-const sass = require("gulp-dart-sass")
-const autoprefixer = require('gulp-autoprefixer')
-const cssnano = require("gulp-cssnano")
-const browsersync = require('browser-sync').create()
+let { src, dest, watch, series } = require('gulp')
+let sass = require("gulp-dart-sass")
+let autoprefixer = require('gulp-autoprefixer')
+let cssnano = require("gulp-cssnano")
+let browsersync = require('browser-sync').create()
 
-var autoprefixerOptions = {};
+let autoprefixerOptions = {};
 
 // Sass Task
 function scssTask(){
