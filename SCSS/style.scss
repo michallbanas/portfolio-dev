@@ -87,15 +87,6 @@
   position: fixed;
 }
 
-.logo {
-  width: 100px;
-  animation: rotate 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  fill: currentColor;
-  color: var(--white-color);
-}
-
 @keyframes rotate {
   to {
     transform: rotate(360deg);
@@ -106,6 +97,15 @@
   .before {
     display: none;
   }
+}
+
+.logo {
+  width: 100px;
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  fill: currentColor;
+  color: var(--white-color);
 }
 
 body {
@@ -240,8 +240,6 @@ p {
   background: var(--yellow-color);
   cursor: pointer;
 }
-
-
 
 /* About-H */
 
