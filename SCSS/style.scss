@@ -184,7 +184,7 @@ p {
 
 .twitter,
 .github,
-.instagram,
+.linked-in,
 .code-pen {
   transition: transform 1s ease-in-out;
   vertical-align: middle;
@@ -192,7 +192,7 @@ p {
 
 .twitter:hover,
 .github:hover,
-.instagram:hover,
+.linked-in:hover,
 .code-pen:hover {
   transform: rotate(360deg);
 }
@@ -272,7 +272,9 @@ p {
 }
 
 .a-projekty,
-.a-projekty:visited {
+.a-projekty:visited,
+.a-fotografia,
+.a-fotografia:visited {
   color: var(--header-color);
 }
 
@@ -288,6 +290,10 @@ li {
 }
 
 .h-fotografia {
+  color: var(--header-color);
+}
+
+.p-fotografia {
   color: var(--header-color);
 }
 
@@ -354,41 +360,6 @@ mark {
 .a-clanky,
 .a-clanky:visited {
   color: var(--yellow-color);
-}
-
-/* UX/UI Design */
-
-.design {
-  background-color: var(--light-black-color);
-  display: grid;
-  place-content: center;
-  text-align: left;
-  padding: 5vh 10vh 0 10vh;
-}
-
-.h-design {
-  color: var(--white-color);
-}
-
-.about-design {
-  color: var(--white-color);
-}
-
-.gallery-design {
-  background-color: var(--light-black-color);
-  padding: 1vh 10vh 10vh 10vh;
-}
-
-.design-gallery {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1% 10% 5%;
-}
-
-.g-img-2 {
-  height: 100%;
-  width: 100%;
 }
 
 /* Kontakt */
@@ -466,18 +437,6 @@ footer {
 /* Responzívny Design */
 
 @media only screen and (max-width: 1024px) {
-  .design {
-    padding: 5% 0;
-  }
-
-  .about-design {
-    padding: 0 10vh;
-  }
-
-  .design-gallery {
-    grid-template-columns: 1fr;
-    padding: 0;
-  }
   .fotografia {
     padding: 5% 0;
   }
@@ -542,27 +501,6 @@ footer {
   br {
     display: none;
   } // zruší zlomy v responzívnej verzii
-
-  .design {
-    padding: 0;
-  }
-
-  .h-design {
-    padding: 10vh 0 0 0;
-  }
-
-  .about-design {
-    padding: 0 5%;
-    text-align: left;
-  }
-
-  .gallery-design {
-    padding: 5vh 0;
-  }
-
-  .design-gallery {
-    grid-template-columns: 1fr;
-  }
 
   .mail {
     margin-top: 5vh;
