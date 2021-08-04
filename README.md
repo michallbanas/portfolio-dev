@@ -32,6 +32,8 @@ To display the text, I used a combination of the Playfair Display serif font and
 
 In future versions I would like to continue to address the speed and accessibility of the site. I also plan to create an English version of the site and do an image conversion from .jpg to .avif format. 
 
+Website: [michalbanas.dev](https://www.michalbanas.dev)
+
 
 
 
