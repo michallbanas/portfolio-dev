@@ -362,10 +362,45 @@ mark {
   color: var(--yellow-color);
 }
 
+/* UX/UI Design */
+
+.design {
+  background-color: var(--header-color);
+  display: grid;
+  place-content: center;
+  text-align: left;
+  padding: 5vh 10vh 0 10vh;
+}
+
+.h-design {
+  color: var(--white-color);
+}
+
+.about-design {
+  color: var(--white-color);
+}
+
+.gallery-design {
+  background-color: var(--header-color);
+  padding: 1vh 10vh 10vh 10vh;
+}
+
+.design-gallery {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1% 10% 5%;
+}
+
+.g-img-2 {
+  height: 100%;
+  width: 100%;
+}
+
 /* Kontakt */
 
 .contact {
-  background-color: var(--light-black-color);
+  background-color: var(--yellow-color);
   display: grid;
   place-content: center;
   text-align: left;
@@ -373,7 +408,7 @@ mark {
 }
 
 .h-contact, .p-contact {
-  color: var(--white-color)
+  color: var(--header-color);
 }
 
 .links {
@@ -448,6 +483,18 @@ footer {
   br {
     display: none;
   }
+  .design {
+    padding: 5% 0;
+  }
+
+  .about-design {
+    padding: 0 10vh;
+  }
+
+  .design-gallery {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
 }
 
 @media only screen and (max-width: 688px) {
@@ -509,6 +556,27 @@ footer {
 
   .mail {
     margin-top: 5vh;
+  }
+
+  .design {
+    padding: 0;
+  }
+
+  .h-design {
+    padding: 10vh 0 0 0;
+  }
+
+  .about-design {
+    padding: 0 5%;
+    text-align: left;
+  }
+
+  .gallery-design {
+    padding: 5vh 0;
+  }
+
+  .design-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
