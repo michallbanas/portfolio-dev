@@ -1,7 +1,7 @@
 {
   "name": "portfolio-dev",
-  "version": "1.0.0",
-  "description": "**for _english_ description scroll down**",
+  "version": "3.0.0",
+  "description": "",
   "main": "ap.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,13 +11,13 @@
     "url": "git+https://github.com/michallbanas/portfolio-dev.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michal Banas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/michallbanas/portfolio-dev/issues"
   },
   "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
   "devDependencies": {
-    "cypress": "^8.5.0"
+    "cypress": "^9.1.1"
   }
 }

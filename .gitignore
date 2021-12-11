@@ -1,4 +1,9 @@
-.DS_Store
+#Folders
 node_modules/
-cypress/
-cypress.json
+cypress/fixtures/
+cypress/support/
+cypress/plugins/
+.vscode/
+
+#Files
+.DS_Store
