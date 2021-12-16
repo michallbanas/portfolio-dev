@@ -1,3 +1,4 @@
 {
-    "baseUrl": "https://www.michalbanas.dev"
+    "baseUrl": "https://www.michalbanas.dev",
+    "retries": 1
 }

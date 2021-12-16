@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
   "devDependencies": {
-    "cypress": "^9.1.1"
+    "convert-csv-to-json": "^1.3.1",
+    "cypress": "^9.1.1",
+    "typescript": "^4.5.3"
   }
 }
