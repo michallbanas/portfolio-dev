@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
   "devDependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.4.0"
   }
 }
