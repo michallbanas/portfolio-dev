@@ -1,4 +1,10 @@
 {
-    "baseUrl": "https://www.michalbanas.dev",
-    "retries": 1
+  "baseUrl": "https://www.michalbanas.dev",
+  "defaultCommandTimeout": 6000,
+  "experimentalFetchPolyfill": true,
+  "retries": 1,
+  "video": false,
+  "viewportHeight": 1050,
+  "viewportWidth": 1680,
+  "projectId": "otico9"
 }
