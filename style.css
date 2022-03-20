@@ -62,6 +62,7 @@
     height: 100vh;
     margin: 0;
     font-family: var(--font-primary);
+    background-color: var(--background-color);
     color: var(--font-color);
   }
 
@@ -85,44 +86,68 @@
     line-height: 1.7em;
     max-width: 37.5em;
   }
+
+  /* Ukraine Support */
+
+  #ukraineSupport {
+    border-top: 5px solid #0057b7;
+    border-bottom: 5px solid #ffd700;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
   
   /* Header*/
   
-  .hero {
-    background-color: var(--background-color);
+  header {
     display: grid;
     place-content: center;
   }
-  
-  /* Social Icon */
-  
-  .a-social {
-    margin: 1rem;
-    align-self: center;
-  }
-  
-  .social-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .twitter,
-  .github,
-  .linked-in,
-  .code-pen {
-    transition: transform 1s ease-in-out;
-    vertical-align: middle;
-    filter: var(--black-filter);
-  }
-  
-  .twitter:hover,
-  .github:hover,
-  .linked-in:hover,
-  .code-pen:hover {
-    transform: rotate(360deg);
-  }
 
+    /* Social Icon */
+
+    .socialIconsGrid {
+      display: grid;
+      grid-auto-flow: column;
+      place-content: center;
+      padding: 0;
+    }
+  
+    .a-social {
+      margin: 1rem;
+      align-self: center;
+    }
+    
+    .social-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .twitter,
+    .github,
+    .linked-in,
+    .code-pen {
+      transition: transform 1s ease-in-out;
+      vertical-align: middle;
+      filter: var(--black-filter);
+    }
+    
+    .twitter:hover,
+    .github:hover,
+    .linked-in:hover,
+    .code-pen:hover {
+      transform: rotate(360deg);
+    }
+
+  /* Article */
+
+  article {
+    width: min(70ch,100vw - 2rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   /* Projekty */
 
@@ -288,8 +313,12 @@
       padding: 0 5vh;
     }
 
+    .about{
+      padding-left: 1em;
+    }
+
     main {
-      padding: 0 3vh;
+      padding: 0 2vh;
     }
 
     .contact {

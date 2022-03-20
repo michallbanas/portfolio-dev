@@ -39,17 +39,21 @@
       content="Portfólio Michala Banaša, testera a developera."
     />
     <meta
-      name="theme-color" content="#262223" id="color-meta-tag"
+      name="theme-color" content="" id="color-meta-tag"
     >
+    <meta name="color-scheme" content="">
     <script defer src="ap.js"></script>
   </head>
 
-  <body class="light-theme">
+  <body id="body" class="light-theme">
+
+    <div id="ukraineSupport"></div>
   
-    <header class="hero"> 
-      <h1>| michal banaš</span></h1>
-      <span class="social-top">
-        <a
+    <header> 
+      <h1 data-cy="title">| michal banaš</span></h1>
+      <ul data-cy="ul-social" role="list" id="socialIconsGrid" class="socialIconsGrid">
+        <li data-cy="li-social" class="listGrid">
+          <a
           class="a-social"
           href="https://twitter.com/michall_banas"
           aria-label="twitter"
@@ -61,7 +65,9 @@
             alt="twitter"
             width="28"
         /></a>
-        <a
+        </li>
+        <li class="listGrid">
+          <a
           class="a-social"
           href="https://github.com/michallbanas"
           aria-label="github"
@@ -69,7 +75,9 @@
           rel="noopener noreferrer"
           ><img class="github" src="images/gh.svg" alt="github" width="28"
         /></a>
-        <a
+        </li>
+        <li class="listGrid">
+          <a
           class="a-social"
           href="https://codepen.io/michallbanas"
           aria-label="codepen"
@@ -81,7 +89,9 @@
             alt="facebook"
             width="28"
         /></a>
-        <a
+        </li>
+        <li class="listGrid">
+          <a
           class="a-social"
           href="https://linkedin.com/in/michall-banas"
           aria-label="linkedin"
@@ -93,15 +103,18 @@
             alt="linkedin"
             width="26"
         /></a>
-      </span>
-      <h2>Test Engineer</h2>
+        </li>
+      </ul>
+      <h2>QA Engineer</h2>
+    </header>
+    <article role="region" id="introduction" data-test="introduction">
       <p class="about">
-        Hello world! Volám sa Michal a som Test Engineer. Rád analyzujem všetko, čo mi príde pod ruku, hrabem sa v kóde, skúmam webové stránky cez konzolu a testujem software alebo aplikácie, či už sa jedná o beta verzie alebo canary/nightly builds.  
+        Hello world! Volám sa Michal a som QA Engineer. Rád analyzujem všetko, čo mi príde pod ruku, hrabem sa v kóde, skúmam webové stránky cez konzolu a testujem software alebo aplikácie, či už sa jedná o beta verzie alebo canary/nightly builds.  
         <br/>
         <br/> 
         Hoci sa považujem za introverta, tak rád spolupracujem s kýmkoľvek na rôznych projektoch či nápadoch a som otvorený novým skúsenostiam. Mám slabosť pre Open Source, Cypress a JavaScript (ES6+) a najradšej pracujem na macOS.  
       </p>
-    </header>
+    </article>
 
     <main>
       <section class="projekty">
@@ -200,12 +213,7 @@
         urobiť nižšie:
       </p>
       <div class="links">
-        <a
-          class="mail-c"
-          href="https://www.buymeacoffee.com/michallbanas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="mail-c" href="https://www.buymeacoffee.com/michallbanas" target="_blank" rel="noopener noreferrer">
           <img class="bmc" src="images/buymeacoffe.svg" alt="" />
           Buy me a coffee
         </a>
