@@ -5,8 +5,9 @@
   font-weight: 300;
   font-display: swap;
   src: local(''),
-       url('../fonts/raleway-v22-latin-ext_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/raleway-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/raleway-v22-latin-ext_latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/raleway-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* open-sans-regular - latin-ext_latin */
@@ -16,335 +17,337 @@
   font-weight: 400;
   font-display: swap;
   src: local(''),
-       url('../fonts/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/open-sans-v27-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/open-sans-v27-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* cookie-regular - latin */
 @font-face {
-    font-family: 'Cookie';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local(''),
-         url('../fonts/cookie-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/cookie-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: 'Cookie';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''), url('../fonts/cookie-v12-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/cookie-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-  /* Typography*/
-  :root {
-    --font-primary: "Open Sans", sans-serif;
-    --font-heading: "Raleway", sans-serif;
-    --size-primary: 1rem;
-    --size-secondary: 1.563rem;
-    --size-heading: 4.768rem;}
-  
-    /* Light*/
- .light-theme {
-      --background-color: #FFF6E8;
-      --font-color: #181818;
-      --white-color: #F8F8F8;
-    }
-  
-  /* Dark*/ 
-  .dark-theme {
-    --background-color: #181818;
-    --font-color: #F8F8F8;
-    --white-color: #303030;
-    --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg) brightness(115%) contrast(95%);
-  }
-  
-  /* Body*/
-  
-  body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    margin: 0;
-    font-family: var(--font-primary);
-    background-color: var(--background-color);
-    color: var(--font-color);
-  }
+/* Typography*/
+:root {
+  --font-primary: 'Open Sans', sans-serif;
+  --font-heading: 'Raleway', sans-serif;
+  --size-primary: 1rem;
+  --size-secondary: 1.563rem;
+  --size-heading: 4.768rem;
+}
 
-  h1 {
-    font-family: var(--font-heading);
-    font-size: var(--size-heading);
-    color: var(--font-color);
-    text-align: center;
-    margin-block-end: 0.30em;
-  }
+/* Light*/
+.light-theme {
+  --background-color: #fff6e8;
+  --font-color: #181818;
+  --white-color: #f8f8f8;
+}
 
-  h2 {
-    font-family: var(--font-heading);
-    font-size: var(--size-secondary);
-    color: var(--font-color);
-    text-align: center;
-  }
+/* Dark*/
+.dark-theme {
+  --background-color: #181818;
+  --font-color: #f8f8f8;
+  --white-color: #303030;
+  --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg)
+    brightness(115%) contrast(95%);
+}
 
-  p {
-    font-size: var(--size-primary);
-    line-height: 1.7em;
-    max-width: 37.5em;
-  }
+/* Body*/
 
-  /* Ukraine Support */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
 
-  #ukraineSupport {
-    border-top: 5px solid #0057b7;
-    border-bottom: 5px solid #ffd700;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  /* Header*/
-  
-  header {
-    display: grid;
-    place-content: center;
-  }
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--size-heading);
+  color: var(--font-color);
+  text-align: center;
+  margin-block-end: 0.3em;
+}
 
-    /* Social Icon */
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--size-secondary);
+  color: var(--font-color);
+  text-align: center;
+}
 
-    .socialIconsGrid {
-      display: grid;
-      grid-auto-flow: column;
-      place-content: center;
-      padding: 0;
-    }
-  
-    .a-social {
-      margin: 1rem;
-      align-self: center;
-    }
-    
-    .social-top {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .twitter,
-    .github,
-    .linked-in,
-    .code-pen {
-      transition: transform 1s ease-in-out;
-      vertical-align: middle;
-      filter: var(--black-filter);
-    }
-    
-    .twitter:hover,
-    .github:hover,
-    .linked-in:hover,
-    .code-pen:hover {
-      transform: rotate(360deg);
-    }
+p {
+  font-size: var(--size-primary);
+  line-height: 1.7em;
+  max-width: 37.5em;
+}
 
-  /* Article */
+/* Ukraine Support */
 
-  article {
-    width: min(70ch,100vw - 2rem);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Projekty */
+#ukraineSupport {
+  border-top: 5px solid #0057b7;
+  border-bottom: 5px solid #ffd700;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
 
-  main {
-    border-top: var(--font-color) solid 5px;
-    border-bottom: var(--font-color) solid 5px;
-    background-color: var(--white-color);
-  }
+/* Header*/
 
-  .projekty {
-    display: grid;
-    max-width: 65rem;
-    margin: auto;
-  }
+header {
+  display: grid;
+  place-content: center;
+}
 
+/* Social Icon */
+
+.socialIconsGrid {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  padding: 0;
+}
+
+.a-social {
+  margin: 1rem;
+  align-self: center;
+}
+
+.social-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.twitter,
+.github,
+.linked-in,
+.code-pen {
+  transition: transform 1s ease-in-out;
+  vertical-align: middle;
+  filter: var(--black-filter);
+}
+
+.twitter:hover,
+.github:hover,
+.linked-in:hover,
+.code-pen:hover {
+  transform: rotate(360deg);
+}
+
+/* Article */
+
+article {
+  width: min(70ch, 100vw - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Projekty */
+
+main {
+  border-top: var(--font-color) solid 5px;
+  border-bottom: var(--font-color) solid 5px;
+  background-color: var(--white-color);
+}
+
+.projekty {
+  display: grid;
+  max-width: 65rem;
+  margin: auto;
+}
+
+.first-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 2em;
+}
+
+.list-grid {
+  display: grid;
+  align-content: start;
+  padding: 2em;
+  border: var(--font-color) solid 5px;
+}
+
+li {
+  list-style: none;
+}
+
+.a-clanky,
+.a-clanky:visited,
+.a-projekty,
+.a-projekty:visited,
+.a-fotografia,
+.a-fotografia:visited {
+  color: var(--font-color);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 200px));
+}
+
+.gallery-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, 200px));
+}
+
+.g-img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+}
+
+/* Kontakt */
+
+.contact {
+  background-color: var(--background-color);
+  display: grid;
+  place-content: center;
+  border-bottom: var(--font-color) solid 5px;
+}
+
+.h-contact,
+.p-contact {
+  color: var(--font-color);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5vh 0;
+}
+
+.mail,
+.mail-c {
+  display: inline;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--font-color);
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  font-family: 'Cookie', cursive;
+  font-size: 1.8rem;
+}
+
+.bmc {
+  height: 2rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+  padding-bottom: 2%;
+  filter: var(--black-filter);
+}
+
+.eml {
+  height: 1.8rem;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+  padding-bottom: 2%;
+  filter: var(--black-filter);
+}
+/* Footer*/
+
+footer {
+  background-color: var(--white-color);
+  padding: 2% 0 1% 0;
+  display: grid;
+  place-content: center;
+}
+
+.p-footer,
+.p-footer-2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Thank You */
+
+.contact-thank {
+  background-color: var(--yellow-color);
+  padding: 20% 0 20%;
+}
+
+.h-contact-thank {
+  color: var(--font-color);
+}
+
+/* Responzívny Design */
+
+@media only screen and (max-width: 1024px) {
   .first-section-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-gap: 2em;
-  }
-
-  .list-grid {
-    display: grid;
-    align-content: start;
-    padding: 2em;
-    border: var(--font-color) solid 5px;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  .a-clanky,
-  .a-clanky:visited,
-  .a-projekty,
-  .a-projekty:visited,
-  .a-fotografia,
-  .a-fotografia:visited {
-    color: var(--font-color);
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(50px, 200px));
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .gallery-two {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(50px, 200px));
+    justify-content: center;
   }
 
-  .g-img {
-    width: 100%;
-    height: auto;
+  ul {
+    padding-inline-start: 0;
   }
 
-  figure{
-    margin-block-start: 5px;
-    margin-block-end: 5px;
-    margin-inline-start: 5px;
-    margin-inline-end: 5px;
+  br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  header {
+    padding: 0 5vh;
   }
 
-  /* Kontakt */
-  
+  .about {
+    padding-left: 1em;
+  }
+
+  main {
+    padding: 0 2vh;
+  }
+
   .contact {
-    background-color: var(--background-color);
-    display: grid;
-    place-content: center;
-    border-bottom: var(--font-color) solid 5px;
+    padding: 0 5vh;
   }
-  
-  .h-contact, .p-contact {
-    color: var(--font-color);
+
+  h1 {
+    font-size: 3.5em;
   }
-  
+
+  br {
+    display: none;
+  }
+
   .links {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 2vh;
     justify-content: space-evenly;
     padding: 5vh 0;
   }
-  
-  .mail,
-  .mail-c {
-    display: inline;
-    text-decoration: none;
-    color: var(--white-color);
-    background-color: var(--font-color);
-    border-radius: 0.6rem;
-    padding: 0.6rem 1.2rem;
-    font-family: "Cookie", cursive;
-    font-size: 1.8rem;
-  }
-  
-  .bmc {
-    height: 2rem;
-    padding-right: 0.5rem;
-    vertical-align: middle;
-    padding-bottom: 2%;
-    filter: var(--black-filter);
-  }
-  
-  .eml {
-    height: 1.8rem;
-    padding-right: 0.5rem;
-    vertical-align: middle;
-    padding-bottom: 2%;
-    filter: var(--black-filter);
-  }
-  /* Footer*/
-  
-  footer {
-    background-color: var(--white-color);
-    padding: 2% 0 1% 0;
-    display: grid;
-    place-content: center;
-  }
-  
-  .p-footer,
-  .p-footer-2 {
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  /* Thank You */
-  
-  .contact-thank {
-    background-color: var(--yellow-color);
-    padding: 20% 0 20%;
-  }
-  
-  .h-contact-thank {
-    color: var(--font-color);
-  }
-  
-  /* Responzívny Design */
-  
-  @media only screen and (max-width: 1024px) {
+}
 
-    .first-section-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
-  
-    .gallery-two{
-      justify-content: center;
-    }
-
-    ul {
-      padding-inline-start: 0;
-    }
-
-    br {
-      display: none;
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .grid-safari {
+      margin-bottom: -4%;
     }
   }
-  
-  @media only screen and (max-width: 688px) {
-
-    header {
-      padding: 0 5vh;
-    }
-
-    .about{
-      padding-left: 1em;
-    }
-
-    main {
-      padding: 0 2vh;
-    }
-
-    .contact {
-      padding: 0 5vh;
-    }
-  
-    h1 {
-      font-size: 3.5em;
-    }
-  
-    br {
-      display: none;
-    } 
-
-    .links {
-      display: grid;
-      grid-gap: 2vh;
-      justify-content: space-evenly;
-      padding: 5vh 0;
-    }
-  }
-  
-  @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-      .grid-safari {
-        margin-bottom: -4%;
-      }
-    }
-  }
+}
