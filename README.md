@@ -8,6 +8,6 @@ My main goal was to develop a simple and responsive website with dark mode and p
 
 If you have a system that allows and support light and dark mode, then my site will follow your preference setting due to implemented Dark Mode at the Operating System Level.
 
-The website was developed with ♡
+The website was developed and tested with ♡
 
 Website: [michalbanas.dev](https://www.michalbanas.dev)
