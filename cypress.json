@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://www.michalbanas.dev",
+  "baseUrl": "http://localhost:3000",
   "defaultCommandTimeout": 6000,
   "experimentalFetchPolyfill": true,
   "retries": 1,
