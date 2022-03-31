@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "module": "ES2020",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "target": "ES2020",
+      "watch": true,
+      "skipLibCheck": true,
+    },
+    "files": [
+      "index.ts"
+    ],
+    "include": [
+      "cypress/integration/**/*.ts",
+      "cypress/support/**/*.ts",
+    ]
+}
