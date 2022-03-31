@@ -11,6 +11,7 @@ test.describe('h1', async () => {
     expect(page.url()).toBe('http://localhost:3000/')
     const title = page.locator('h1');
     await expect(title).toBeVisible()
+    await expect(title).toContainText('michal banaš')
     await page.pause()
   });
 })
