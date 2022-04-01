@@ -3,6 +3,7 @@ node_modules/
 cypress/plugins/
 .vscode/
 test-results/
+playwright-report/
 cypress/integration/*.js
 cypress/support/*.js
 
