@@ -7,6 +7,7 @@ const config = {
     testDir: 'playwright',
     retries: 2,
     forbidOnly: !!process.env.CI,
+    reporter: [ ['html', { open: 'always' }] ],
   use: {
     baseURL: 'http://localhost:3000/', 
     trace: 'retain-on-failure',
