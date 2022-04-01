@@ -1,13 +1,16 @@
 {
   "name": "portfolio-dev",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
     "cypress": "npx cypress open",
+    "playwright": "npx playwright test",
+    "pw-chrome": "npx playwright test --project='chromium' --debug",
     "typescript": "npx tsc --watch ",
-    "prettier": "npx prettier --write index.html & npx prettier --write style.css"
+    "prettier": "npx prettier --write index.html & npx prettier --write style.css & npx prettier --write index.ts",
+    "prettier-cy": "npx prettier --write cypress/integration/**"
   },
   "repository": {
     "type": "git",
