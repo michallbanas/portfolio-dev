@@ -6,8 +6,8 @@ test.beforeEach(async ({ page }) => {
     await page.goto('');
   });
 
-test.describe('headings', async () => {
-  test('find h1 and check if it is visible and it has correct title', async ({ page }) => {
+test.describe('Headings 👀', async () => {
+  test('should find page title and check if it is visible', async ({ page }) => {
     expect(page.url()).toBe('http://localhost:3000/')
     const title = page.locator('h1');
     await expect(title).toBeVisible()
@@ -16,7 +16,7 @@ test.describe('headings', async () => {
     await page.pause()
   });
 
-  test('find first h2 and check if it has correct title', async ({ page }) => {
+  test('should find subheading and check if it has correct name', async ({ page }) => {
     const heading = page.locator('[data-cy="heading"]')
     await expect(heading).toBeVisible()
     await expect(heading).toHaveText('QA Engineer')
