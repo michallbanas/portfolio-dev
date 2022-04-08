@@ -34,6 +34,18 @@ class ChromeAutoDarkOff {
             : null;
     }
 }
+class replaceMail {
+    constructor() {
+        this.mail = document.getElementById('mail');
+    }
+    set mail(mail) {
+        mail.addEventListener('click', () => {
+            mail.getAttribute('href');
+            mail.setAttribute('href', 'mailto:banas.michal@icloud.com');
+        });
+    }
+}
 new DarkMode();
 new SafariTabLayout();
 new ChromeAutoDarkOff();
+new replaceMail();

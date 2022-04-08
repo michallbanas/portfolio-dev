@@ -3,9 +3,11 @@
 /* Dark Mode at the Operating System Level */
 
 class DarkMode {
+
   constructor() {
     this.darkMode = window.matchMedia('(prefers-color-scheme: dark)');
   }
+
   set darkMode(darkMode: MediaQueryList) {
     darkMode.matches
       ? document.body.classList.add('dark-theme')
@@ -16,6 +18,7 @@ class DarkMode {
 /* The New Safari Tab Layout (Safari 15+) */
 
 class SafariTabLayout {
+
   constructor() {
     this.safari = navigator.vendor;
   }
@@ -35,9 +38,11 @@ class SafariTabLayout {
 /* Google Chrome Auto Dark Mode off (experimental feature) */
 
 class ChromeAutoDarkOff {
+
   constructor() {
     this.chrome = navigator.vendor;
   }
+
   set chrome(chrome: string) {
     const meta = document.querySelector('meta[name="color-scheme"]');
     chrome === 'Google Inc.'
@@ -46,6 +51,25 @@ class ChromeAutoDarkOff {
   }
 }
 
+/* Replace href value in mail */
+
+class replaceMail {
+
+  constructor() {
+    this.mail = document.getElementById('mail');
+  }
+
+  set mail(mail: HTMLElement) {
+      mail.addEventListener('click', () => {
+        mail.getAttribute('href')
+        mail.setAttribute('href', 'mailto:banas.michal@icloud.com')
+    })
+  } 
+}
+
+
+
 new DarkMode();
 new SafariTabLayout();
 new ChromeAutoDarkOff();
+new replaceMail();
