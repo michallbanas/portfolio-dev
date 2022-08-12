@@ -4,5 +4,5 @@
       "types": ["cypress"],
       "typeRoots": ["cypress/support/"]
     },
-    "exclude": ["cypress/**"],
+    "exclude": ["../cypress/**"],
   }
