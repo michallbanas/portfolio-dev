@@ -13,7 +13,6 @@ it('should make a request with basic info', () => {
     })
 
     cy.window()
-      // @ts-expect-error
       .then(({ document, Cypress }) => { 
         cy.log(`This test is powered by Cypress ${Cypress.version}`)
         cy.log(`And it is running in ${Cypress.browser.displayName} ${Cypress.browser.version}`)

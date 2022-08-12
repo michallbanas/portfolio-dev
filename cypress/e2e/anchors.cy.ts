@@ -15,8 +15,8 @@ describe('Test', () => {
           followRedirect: false,
           failOnStatusCode: false
         })
-        .then(({ status }) => {
-          cy.log(`Media: ${ariaLabel} - Response status: ${status}`)
+          .then(({ status }) => {
+            cy.log(`Media: ${ariaLabel} - Response status: ${status}`)
       })
     })
   })
