@@ -11,13 +11,5 @@ it('should make a request with basic info', () => {
         cy.log(`Response status: ${status}`)
         cy.log(`Response statusText: ${statusText}`)
     })
-
-    cy.window()
-      .then(({ document, Cypress }) => { 
-        cy.log(`This test is powered by Cypress ${Cypress.version}`)
-        cy.log(`And it is running in ${Cypress.browser.displayName} ${Cypress.browser.version}`)
-        cy.log(`Node version is ${Cypress.originalConfig.resolvedNodeVersion}`)
-        cy.log(`The title of the page is ${document.title}`)
-    })
   })
 })
