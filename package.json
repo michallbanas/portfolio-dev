@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "browser-sync --server --files [\"index.html, public/style.css, public/app/*.js, public/blog/*.html\"] --port 3000",
     "test": "npx cypress open",
+    "typescript": "tsc --watch",
     "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\""
   },
   "repository": {

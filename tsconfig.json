@@ -4,10 +4,11 @@
       "baseUrl": "../node_modules",
       "target": "es6",
       "lib": ["es6", "dom"],
-      "types": ["cypress"],
+      "skipLibCheck": true,
+      "outDir":"public/app/",
       "typeRoots": ["./node_modules/@types", "cypress/support/"],
     },
     "include": [
-      "**/*.ts"
+      "src/*.ts"
     ]
   }
