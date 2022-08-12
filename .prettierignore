@@ -1,2 +1,7 @@
-# Ignore all JS files:
-*.js
+.cache
+.tmp/
+__generated__/
+data/
+dist/
+package.json
+README.md

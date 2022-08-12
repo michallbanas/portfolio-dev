@@ -4,10 +4,9 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local(''),
-    url('../fonts/raleway-v22-latin-ext_latin-300.woff2') format('woff2'),
+  src: local(''), url('/public/fonts/raleway-v22-latin-ext_latin-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/raleway-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url('/public/fonts/raleway-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* open-sans-regular - latin-ext_latin */
@@ -16,10 +15,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''),
-    url('../fonts/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'),
+  src: local(''), url('/public/fonts/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/open-sans-v27-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url('/public/fonts/open-sans-v27-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* cookie-regular - latin */
@@ -28,9 +26,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''), url('../fonts/cookie-v12-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/cookie-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('/public/fonts/cookie-v12-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/public/fonts/cookie-v12-latin-regular.woff')
+      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Typography*/
@@ -54,8 +52,8 @@
   --background-color: #181818;
   --font-color: #f8f8f8;
   --white-color: #303030;
-  --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg)
-    brightness(115%) contrast(95%);
+  --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg) brightness(115%)
+    contrast(95%);
 }
 
 /* Body*/
@@ -78,6 +76,10 @@ h1 {
   margin-block-end: 0.3em;
 }
 
+#blogTitle {
+  font-size: 4em;
+}
+
 h2 {
   font-family: var(--font-heading);
   font-size: var(--size-secondary);
@@ -89,6 +91,12 @@ p {
   font-size: var(--size-primary);
   line-height: 1.7em;
   max-width: 37.5em;
+}
+
+#p-Blog {
+  font-size: var(--size-primary);
+  line-height: 1.7em;
+  max-width: 70em;
 }
 
 /* Ukraine Support */
@@ -111,16 +119,22 @@ header {
 
 /* Social Icon */
 
-.socialIconsGrid {
+.socialIconsGrid,
+.articleInfo {
   display: grid;
   grid-auto-flow: column;
   place-content: center;
   padding: 0;
 }
 
-.a-social {
+.a-social,
+.l-info {
   margin: 1rem;
   align-self: center;
+}
+
+.l-info {
+  font-size: 0.8em;
 }
 
 .social-top {
@@ -149,6 +163,12 @@ header {
 
 article {
   width: min(70ch, 100vw - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#articleBlog {
+  width: min(95ch, 100vw - 2rem);
   margin-left: auto;
   margin-right: auto;
 }
@@ -189,7 +209,9 @@ li {
 .a-projekty,
 .a-projekty:visited,
 .a-fotografia,
-.a-fotografia:visited {
+.a-fotografia:visited,
+.a-blog,
+.a-blog:visited {
   color: var(--font-color);
 }
 
@@ -265,7 +287,7 @@ figure {
 }
 /* Footer*/
 
-footer {
+#footerMain {
   background-color: var(--white-color);
   padding: 2% 0 1% 0;
   display: grid;
@@ -276,6 +298,13 @@ footer {
 .p-footer-2 {
   font-size: 1rem;
   text-align: center;
+}
+
+/* Footer Blog */
+#footerBlog {
+  padding: 2% 0 1% 0;
+  display: grid;
+  place-content: center;
 }
 
 /* Thank You */

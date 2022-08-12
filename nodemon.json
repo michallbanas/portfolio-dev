@@ -1,4 +1,0 @@
-{
-    "watch": ["index.html", "style.css", "index.js", "app.js"],
-    "ext": "js, css, html, json"
-}

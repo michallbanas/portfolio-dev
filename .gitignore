@@ -1,11 +1,8 @@
 #Folders
 node_modules/
-cypress/plugins/
 .vscode/
 test-results/
-playwright-report/
-cypress/integration/*.js
-cypress/support/*.js
 
 #Files
 .DS_Store
+cypress/e2e/test.cy.js 

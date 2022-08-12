@@ -1,0 +1,7 @@
+.ci/
+.env
+.gitlab/
+.tmp/
+coverage/
+data/
+dist/
