@@ -40,20 +40,30 @@
   --size-heading: 4.768rem;
 }
 
-/* Light*/
-.light-theme {
-  --background-color: #fff6e8;
-  --font-color: #181818;
-  --white-color: #f8f8f8;
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fff6e8;
+    --font-color: #181818;
+    --white-color: #f8f8f8;
+  }
+  html {
+    content: "light"; 
+}
 }
 
-/* Dark*/
-.dark-theme {
-  --background-color: #181818;
-  --font-color: #f8f8f8;
-  --white-color: #303030;
-  --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg) brightness(115%)
-    contrast(95%);
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #181818;
+    --font-color: #f8f8f8;
+    --white-color: #303030;
+    --black-filter: invert(98%) sepia(0%) saturate(1272%) hue-rotate(176deg) brightness(115%)
+      contrast(95%);
+  }
+  html {
+    content: "dark"; 
+}
 }
 
 /* Body*/
