@@ -27,6 +27,14 @@ describe('Test', () => {
       cy.wrap(link).should('have.attr', 'target', '_blank')
       cy.wrap(link).should('have.attr', 'rel', 'noopener noreferrer')
     }) 
+    cy.get('a').filter('[target="_blank"]').each(link => {
+      expect(link).to.have.attr('href').contain('https://')
+    })
+    cy.get('h1, h2').filter('[data-cy]').spread((h1, h2) => {
+      expect(h1).to.have.attr('data-cy', 'title')
+      expect(h2).to.have.attr('data-cy', 'header')
+      expect(h2).to.have.attr('lang', 'en')
+    })
   })
 
   it('should find buy me a coffee anchor and test if', () => {
