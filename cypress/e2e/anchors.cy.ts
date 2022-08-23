@@ -5,7 +5,7 @@ describe('Test', () => {
     cy.visit('/')
   })
 
-  it('social links req', () => {
+  it.skip('social links req', () => {
     cy.get('[data-cy="social-icons"]')
       .each(($a) => {
         const href = $a.prop('href')
@@ -38,7 +38,7 @@ describe('Test', () => {
   })
 
   it('should find buy me a coffee anchor and test if', () => {
-    cy.get('.mail-c')
+    cy.get('[data-cy="bmc"]')
       .should('contain', 'Buy me a coffee')
       .invoke('attr', 'target')
       .should('eq', '_blank')
