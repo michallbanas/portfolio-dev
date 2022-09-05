@@ -34,6 +34,19 @@ describe('Test', () => {
   })
 
   it('should find h1, h2, check if they are have font family Raleway', () => {
+    cy.get('h2').spread((prva, druha, tretia, stvrta) => {
+      expect(prva).to.have.text("QA Engineer")
+      expect(druha).to.have.text("Blog")
+      expect(tretia).to.have.text("Fotografia")
+      expect(stvrta).to.have.text("O mne")
+    })
+
+    cy.get('h2').spread((prva, druha, ...rest) => {
+      expect(prva).to.have.text("QA Engineer")
+      expect(druha).to.have.text("Blog")
+    })
+
+    const filtEle : string[] = []
     cy.get('h1, h2')
       .each($header => {
         expect($header).to.have.css('font-family', 'Raleway, sans-serif')
@@ -42,7 +55,18 @@ describe('Test', () => {
       .should("have.length", headersLength)
       .filter('.h-blog, .h-fotografia, .h-contact')
       .each($filteredElements => {
+        filtEle.push($filteredElements.text())
         expect($filteredElements.text()).be.oneOf(sections)
+      })
+      .then(() => {
+        expect(filtEle).to.deep.equal(sections)
+      })
+      .spread((blogElement, photoElement, contactElement) => {
+        cy.wrap(sections).spread((blog, fotografia, oMne) => {
+          cy.wrap(blogElement).invoke("text").should("deep.equal", blog)
+          cy.wrap(photoElement).invoke("text").should("deep.equal", fotografia)
+          cy.wrap(contactElement).invoke("text").should("deep.equal", oMne)
+        })
       })
   })
 })
