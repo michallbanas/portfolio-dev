@@ -1,7 +1,11 @@
+#files
+
 .cache
 .tmp/
+package.json
+README.md
+
+#folders
 __generated__/
 data/
 dist/
-package.json
-README.md
