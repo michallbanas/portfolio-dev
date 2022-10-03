@@ -17,6 +17,5 @@ export default defineConfig({
       require("cypress-fail-fast/plugin")(on, config);
       return config;
     },
-    specPattern: "cypress/integration/**/*.js",
   },
 })
