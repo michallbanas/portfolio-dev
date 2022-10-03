@@ -42,8 +42,9 @@ jobs:
             browser: firefox
 
   Cypress - Webkit:
-    - name: Cypress - Safari
-      uses: cypress-io/github-action@v4.2.0
-      with:
-          start: npm run server
-          browser: webkit
+    steps: 
+      - name: Cypress - Safari
+        uses: cypress-io/github-action@v4.2.0
+        with:
+            start: npm run server
+            browser: webkit
