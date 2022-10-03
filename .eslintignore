@@ -2,6 +2,7 @@
 .env
 .gitlab/
 .tmp/
+
 coverage/
 data/
 dist/
