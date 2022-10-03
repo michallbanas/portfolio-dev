@@ -1,8 +1,11 @@
 {
-    "extends": "../tsconfig.json",
     "compilerOptions": {
-      "types": ["cypress"],
-      "typeRoots": ["cypress/support/"]
-    },
-    "exclude": ["../cypress/**"],
+      "strict": true,
+      "target": "es6",
+      "baseUrl": "../node_modules",
+      "moduleResolution": "node",
+      "lib": ["es6", "dom"],
+      "skipLibCheck": true,
+      "types": ["cypress", "node"],
+    }
   }

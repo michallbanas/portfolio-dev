@@ -1,14 +1,20 @@
 {
     "compilerOptions": {
       "strict": true,
-      "baseUrl": "../node_modules",
       "target": "es6",
+      "baseUrl": "../node_modules",
+      "moduleResolution": "node",
       "lib": ["es6", "dom"],
       "skipLibCheck": true,
       "outDir":"public/app/",
-      "typeRoots": ["./node_modules/@types", "cypress/support/"],
+      "types": ["cypress", "node"],
     },
     "include": [
-      "src/*.ts"
+      "src/*.ts",
+    ],
+    "exclude": [
+      "node_modules",
+      "cypress",
+      "playwright",
     ]
   }
