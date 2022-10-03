@@ -29,22 +29,14 @@ jobs:
           start: npm run server
           wait-on: 'http://localhost:3000'
           browser: chrome
-          record: true
-          parallel: true
     - name: Cypress - Firefox
       uses: cypress-io/github-action@v4.2.0
       with:
           start: npm run server
           browser: firefox
-          record: true
-          parallel: true
           fail-fast: false
     - name: Cypress - Safari
       uses: cypress-io/github-action@v4.2.0
       with:
           start: npm run server
           browser: webkit
-          record: true
-          parallel: true
-
-
