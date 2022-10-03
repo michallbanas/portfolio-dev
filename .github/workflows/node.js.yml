@@ -9,12 +9,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-     strategy:
-       matrix:
-         node-version: [18.x]
+    strategy:
+      matrix:
+        node-version: [18.x]
 
-     steps:
-     - uses: actions/checkout@v3
+    steps:
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -23,5 +23,23 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm install
-
- 
+  
+    Cypress - Chrome: 
+    - name: Chrome
+      uses: cypress-io/github-action@v4.2.0
+      with:
+          start: npm run server
+          wait-on: 'http://localhost:3000'
+          browser: chrome
+    Cypress - Firefox:
+    - name: Cypress - Firefox
+      uses: cypress-io/github-action@v4.2.0
+      with:
+          start: npm run server
+          browser: firefox
+    Cypress - Webkit:
+    - name: Cypress - Safari
+      uses: cypress-io/github-action@v4.2.0
+      with:
+          start: npm run server
+          browser: webkit
