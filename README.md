@@ -8,7 +8,7 @@ My main goal was to develop a simple and responsive website with dark mode and p
 
 If you have a system that allows and support light and dark mode, then my site will follow your preference setting due to implemented Dark Mode at the Operating System Level.
 
-This is what I use in the project: HTML, CSS, JavaScript, TypeScript, Cypress, Eslint, Prettier and BrowserSync.
+This is what I use in the project: HTML, CSS, JavaScript, TypeScript, Cypress, Playwright, Eslint, Prettier and BrowserSync.
 
 The website was developed and tested with ♡
 
