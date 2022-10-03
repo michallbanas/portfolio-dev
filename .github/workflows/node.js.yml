@@ -32,10 +32,10 @@ jobs:
           browser: chrome
     - name: Cypress - Firefox
       uses: cypress-io/github-action@v4.2.0
+      allow_failure: true
       with:
           start: npm run server
           browser: firefox
-          allow-failures: true
     - name: Cypress - Safari
       uses: cypress-io/github-action@v4.2.0
       with:
