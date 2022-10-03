@@ -29,4 +29,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm install
-    - run: npm cypress run
+    - name: Cypress run
+      uses: cypress-io/github-action@v4.2.0
