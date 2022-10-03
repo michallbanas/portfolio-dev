@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+        fail-fast: false
 
     steps:
     - uses: actions/checkout@v3
@@ -34,11 +35,9 @@ jobs:
       uses: cypress-io/github-action@v4.2.0
       with:
           start: npm run server
-          wait-on: 'http://localhost:3000'
           browser: firefox
     - name: Cypress - Safari
       uses: cypress-io/github-action@v4.2.0
       with:
           start: npm run server
-          wait-on: 'http://localhost:3000'
           browser: webkit
