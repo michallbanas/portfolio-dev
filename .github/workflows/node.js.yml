@@ -32,6 +32,5 @@ jobs:
     - name: Cypress run
       uses: cypress-io/github-action@v4.2.0
       with:
-          parallel: true
           start: npm run server
           wait-on: 'http://localhost:3000'
