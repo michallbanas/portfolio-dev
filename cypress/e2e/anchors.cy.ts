@@ -1,39 +1,25 @@
-/// <reference types="Cypress" />
-
 describe('Test', () => {
   beforeEach(() => {
     cy.visit('/')
   })
 
-  it.skip('social links req', () => {
+  it('social icon anchors should be visible and have attributes href, targer and rel', () => {
     cy.get('[data-cy="social-icons"]')
-      .each(($a) => {
-        const href = $a.prop('href')
-        const ariaLabel = $a.attr('aria-label')
-        cy.request({
-          url: href,
-          followRedirect: false,
-          failOnStatusCode: false
-        })
-          .then(({ status }) => {
-            cy.log(`Media: ${ariaLabel} - Response status: ${status}`)
+      .each(link => {
+        expect(link).to.be.visible
+        expect(link).to.have.attr('target', '_blank')
+        expect(link).to.have.attr('rel', 'noopener noreferrer')
       })
-    })
-  })
+      .spread((twitter, github, codepen, linkedIn) => {
+        expect(twitter).to.have.attr('href').to.eq('https://twitter.com/michall_banas')
+        expect(github).to.have.attr('href').to.eq('https://github.com/michallbanas')
+        expect(codepen).to.have.attr('href').to.eq('https://codepen.io/michallbanas')
+        expect(linkedIn).to.have.attr('href').to.eq('https://linkedin.com/in/michall-banas')
+      })
 
-  it('social links', () => {
-    cy.get('[data-cy="social-icons"]').each(link => {
-      cy.wrap(link).should('have.attr', 'href').and('contain', 'https://')
-      cy.wrap(link).should('have.attr', 'target', '_blank')
-      cy.wrap(link).should('have.attr', 'rel', 'noopener noreferrer')
-    }) 
-    cy.get('a').filter('[target="_blank"]').each(link => {
-      expect(link).to.have.attr('href').contain('https://')
-    })
-    cy.get('h1, h2').filter('[data-cy]').spread((h1, h2) => {
-      expect(h1).to.have.attr('data-cy', 'title')
-      expect(h2).to.have.attr('data-cy', 'header')
-      expect(h2).to.have.attr('lang', 'en')
+    cy.checkLinksAreVisible({
+      selector: '[data-cy="social-icons"]',
+      expectedVisibleLinks: 4,
     })
   })
 

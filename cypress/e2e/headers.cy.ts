@@ -1,12 +1,4 @@
-/// <reference types="cypress" />
-
-const testData = {
-  title: "| michal banaš",
-  titleLength: 1,
-  header: "QA Engineer",
-  headersLength: 4,
-  sections: ["Blog", "Fotografia", "O mne"]
-}
+import { testData } from '../fixtures/testData'
 
 describe('Test', () => {
   const { title, titleLength, header, headersLength, sections } = testData
@@ -34,25 +26,20 @@ describe('Test', () => {
   })
 
   it('should find h1, h2, check if they are have font family Raleway', () => {
-    cy.get('h2').spread((prva, druha, tretia, stvrta) => {
-      expect(prva).to.have.text("QA Engineer")
-      expect(druha).to.have.text("Blog")
-      expect(tretia).to.have.text("Fotografia")
-      expect(stvrta).to.have.text("O mne")
+    cy.get('h2').spread((main, blog, photo, about) => {
+      expect(main).to.have.text('QA Engineer')
+      expect(blog).to.have.text('Blog')
+      expect(photo).to.have.text('Fotografia')
+      expect(about).to.have.text('O mne')
     })
 
-    cy.get('h2').spread((prva, druha, ...rest) => {
-      expect(prva).to.have.text("QA Engineer")
-      expect(druha).to.have.text("Blog")
-    })
-
-    const filtEle : string[] = []
+    const filtEle: string[] = []
     cy.get('h1, h2')
       .each($header => {
         expect($header).to.have.css('font-family', 'Raleway, sans-serif')
       })
       .filter('h2')
-      .should("have.length", headersLength)
+      .should('have.length', headersLength)
       .filter('.h-blog, .h-fotografia, .h-contact')
       .each($filteredElements => {
         filtEle.push($filteredElements.text())
@@ -63,9 +50,9 @@ describe('Test', () => {
       })
       .spread((blogElement, photoElement, contactElement) => {
         cy.wrap(sections).spread((blog, fotografia, oMne) => {
-          cy.wrap(blogElement).invoke("text").should("deep.equal", blog)
-          cy.wrap(photoElement).invoke("text").should("deep.equal", fotografia)
-          cy.wrap(contactElement).invoke("text").should("deep.equal", oMne)
+          cy.wrap(blogElement).invoke('text').should('deep.equal', blog)
+          cy.wrap(photoElement).invoke('text').should('deep.equal', fotografia)
+          cy.wrap(contactElement).invoke('text').should('deep.equal', oMne)
         })
       })
   })
