@@ -13,5 +13,10 @@ export default defineConfig({
     baseUrl: 'http://localhost:3000',
     experimentalWebKitSupport: true,
     supportFile: 'cypress/support/index.ts',
+    setupNodeEvents(on, config) {
+      require("cypress-fail-fast/plugin")(on, config);
+      return config;
+    },
+    specPattern: "cypress/integration/**/*.js",
   },
 })

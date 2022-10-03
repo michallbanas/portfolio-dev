@@ -1,14 +1,18 @@
 name: Node.js CI
 
-on: [push]
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
+        fail-fast: false
 
     steps:
     - uses: actions/checkout@v3
@@ -26,14 +30,21 @@ jobs:
           start: npm run server
           wait-on: 'http://localhost:3000'
           browser: chrome
+          record: true
+          parallel: true
     - name: Cypress - Firefox
       uses: cypress-io/github-action@v4.2.0
-      allow_failure: true
       with:
           start: npm run server
           browser: firefox
+          record: true
+          parallel: true
     - name: Cypress - Safari
       uses: cypress-io/github-action@v4.2.0
       with:
           start: npm run server
           browser: webkit
+          record: true
+          parallel: true
+
+
