@@ -48,8 +48,8 @@
     --white-color: #f8f8f8;
   }
   html {
-    content: "light"; 
-}
+    content: 'light';
+  }
 }
 
 /* Dark mode */
@@ -62,8 +62,8 @@
       contrast(95%);
   }
   html {
-    content: "dark"; 
-}
+    content: 'dark';
+  }
 }
 
 /* Body*/
