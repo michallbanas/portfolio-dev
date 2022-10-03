@@ -3,7 +3,7 @@ import { defineConfig } from 'cypress'
 export default defineConfig({
   defaultCommandTimeout: 6000,
   experimentalFetchPolyfill: true,
-  retries: { "runMode": 2, "openMode": 1 },
+  retries: { runMode: 2, openMode: 1 },
   screenshotOnRunFailure: false,
   video: false,
   viewportHeight: 1050,
