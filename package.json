@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "browser-sync --server --files [\"index.html, public/style.css, public/app/*.js, public/blog/*.html\"] --port 3000",
+    "server": "browser-sync --server --no-open --port 3000",
     "test-cypress": "npx cypress open",
     "test-playwright": "npx playwright test",
     "debug-playwright": "npx playwright test --debug",
