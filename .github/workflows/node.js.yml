@@ -35,6 +35,7 @@ jobs:
       with:
           start: npm run server
           browser: firefox
+          allow-failures: true
     - name: Cypress - Safari
       uses: cypress-io/github-action@v4.2.0
       with:
