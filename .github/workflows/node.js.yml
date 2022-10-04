@@ -25,15 +25,15 @@ jobs:
     - run: npm run build --if-present
     - run: npm install
 
-  test:
-    name: test
+  cypress-chrome:
+    name: cypress-chrome
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
     steps:    
     - uses: actions/checkout@v3
-    - name: Cypress - Chrome
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
@@ -41,9 +41,14 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm install
-      uses: cypress-io/github-action@v4.2.0
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
       with:
-          start: npm run server
-          wait-on: 'http://localhost:3000'
-          browser: chrome
+        start: npm start
+        wait-on: 'http://localhost:3000'
+        wait-on-timeout: 300
+        browser: chrome
+        headless: true
+    
+      
 
