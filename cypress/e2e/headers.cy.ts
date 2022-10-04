@@ -36,7 +36,9 @@ describe('Test', () => {
     const filtEle: string[] = []
     cy.get('h1, h2')
       .each($header => {
-        expect($header).to.have.css('font-family', 'Raleway, sans-serif')
+        const font = $header.css('font-family')
+        expect(font).to.contain('Raleway')
+        expect(font).to.contain('sans-serif')
       })
       .filter('h2')
       .should('have.length', headersLength)
