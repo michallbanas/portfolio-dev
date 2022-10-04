@@ -48,7 +48,6 @@ jobs:
         wait-on: 'http://localhost:3000'
         wait-on-timeout: 300
         browser: chrome
-        headless: true
     
   cypress-firefox:
     name: cypress-firefox
@@ -73,7 +72,6 @@ jobs:
         wait-on: 'http://localhost:3000'
         wait-on-timeout: 300
         browser: firefox
-        headless: true
 
   cypress-safari:
     name: cypress-safari
@@ -99,4 +97,3 @@ jobs:
         wait-on: 'http://localhost:3000'
         wait-on-timeout: 300
         browser: webkit
-        headless: true
