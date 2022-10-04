@@ -75,7 +75,7 @@ jobs:
         browser: mozilla
         headless: true
 
- cypress-safari:
+  cypress-safari:
     name: cypress-safari
     runs-on: ubuntu-latest
     strategy:
