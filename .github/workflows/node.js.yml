@@ -46,7 +46,6 @@ jobs:
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
-        wait-on-timeout: 300
         browser: chrome
     
   cypress-firefox:
@@ -70,7 +69,6 @@ jobs:
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
-        wait-on-timeout: 300
         browser: firefox
 
   cypress-safari:
@@ -95,5 +93,4 @@ jobs:
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
-        wait-on-timeout: 300
         browser: webkit
