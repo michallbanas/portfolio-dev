@@ -27,6 +27,7 @@ jobs:
 
   cypress-chrome:
     name: cypress-chrome
+    needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -50,6 +51,7 @@ jobs:
     
   cypress-firefox:
     name: cypress-firefox
+    needs: [build, cypress-chrome]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -73,6 +75,7 @@ jobs:
 
   cypress-safari:
     name: cypress-safari
+    needs: [build, cypress-chrome]
     runs-on: ubuntu-latest
     strategy:
       matrix:
