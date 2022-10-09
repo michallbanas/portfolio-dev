@@ -1,10 +1,11 @@
 'use strict'
 /* Replace href value in mail */
-const replaceMail = () => {
+const replaceMail = ({ mailHref }) => {
   const mail = document.getElementById('mail')
-  return mail.addEventListener('click', () => {
-    mail.getAttribute('href')
-    mail.setAttribute('href', 'mailto:banas.michal@icloud.com')
+  mail?.addEventListener('click', () => {
+    mail?.setAttribute('href', mailHref)
   })
 }
-replaceMail()
+replaceMail({
+  mailHref: 'mailto:banas.michal@icloud.com',
+})

@@ -1,9 +1,13 @@
 'use strict'
 /* Dark Mode at the Operating System Level */
-const darkModeAtOperatingLeve = () => {
-  const darkMode = getComputedStyle(document.documentElement).getPropertyValue('content')
+const darkModeAtOperatingLeve = ({ dark, light, element }) => {
+  const darkMode = getComputedStyle(element).getPropertyValue('content')
   return darkMode.includes('dark')
-    ? document.documentElement.setAttribute('data-theme', 'dark')
-    : document.documentElement.setAttribute('data-theme', 'light')
+    ? element.setAttribute('data-theme', dark)
+    : element.setAttribute('data-theme', light)
 }
-darkModeAtOperatingLeve()
+darkModeAtOperatingLeve({
+  dark: 'dark',
+  light: 'light',
+  element: document.documentElement,
+})

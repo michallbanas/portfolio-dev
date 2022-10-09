@@ -1,12 +1,17 @@
 /* Calculation of Reading Time */
 
-const readingTimeBase = () => {
-  const readingTime = document.getElementById('p-Blog')?.innerText as string
-  const wpm = 225
-  const words = readingTime?.trim().split(/\s+/).length
-  const time = Math.ceil(words / wpm) as number
-  const readingTimeOutput = document.getElementById('readingTimeOutput') as HTMLInputElement
+type ReadingTime = {
+  wmp: number
+}
+
+const words = (text: string) => text.trim().split(/\s+/).length
+const readingTimeBase = ({ wmp }: ReadingTime) => {
+  const readingTime: string = document.getElementById('p-Blog')?.innerText ?? ''
+  const time: number = Math.ceil(words(readingTime) / wmp)
+  const readingTimeOutput = document.getElementById('readingTimeOutput') as HTMLElement
   readingTimeOutput.innerText = `${time} min read`
 }
 
-readingTimeBase()
+readingTimeBase({
+  wmp: 225,
+})
