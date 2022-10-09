@@ -1,14 +1,16 @@
 /* Replace href value in mail */
 
-class ReplaceMail {
-  constructor() {
-    this.mail = document.getElementById('mail') as HTMLElement
-  }
-  set mail(mail: HTMLElement) {
-    mail.addEventListener('click', () => {
-      mail.getAttribute('href')
-      mail.setAttribute('href', 'mailto:banas.michal@icloud.com')
-    })
-  }
+type ReplaceMail = {
+  mailHref: string
 }
-new ReplaceMail()
+
+const replaceMail = ({ mailHref }: ReplaceMail) => {
+  const mail = document.getElementById('mail')
+  mail?.addEventListener('click', () => {
+    mail?.setAttribute('href', mailHref)
+  })
+}
+
+replaceMail({
+  mailHref: 'mailto:banas.michal@icloud.com',
+})

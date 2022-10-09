@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
       "baseUrl": "../node_modules",
-      "lib": ["es6", "dom"],
+      "lib": ["es2020", "dom"],
       "moduleResolution": "node",
       "outDir":"public/app/",
       "skipLibCheck": true,
       "strict": true,
-      "target": "es6",
+      "target": "es2020",
       "types": ["cypress", "node"]
     },
     "include": [
@@ -15,6 +15,11 @@
     "exclude": [
       "node_modules",
       "cypress",
-      "playwright"
-    ]
+      "playwright",
+    ],
+    "compileOnSave": true,
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
   }
