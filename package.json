@@ -7,12 +7,14 @@
     "dev": "browser-sync --server --files [\"index.html, public/style.css, public/app/*.js, public/blog/*.html\"] --port 3000",
     "server": "browser-sync --server --no-open --port 3000",
     "test-cypress": "npx cypress open",
+    "test-cypress-headles": "cypress run",
     "test-playwright": "npx playwright test",
     "debug-playwright": "npx playwright test --debug",
     "playwright-report": "npx playwright show-report ",
     "lint-check": "eslint ./src/*.ts --ext .ts",
     "typescript": "tsc --watch",
-    "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\""
+    "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\"",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,7 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
     "playwright-webkit": "^1.26.1",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4"

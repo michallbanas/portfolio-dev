@@ -1,5 +1,4 @@
 #Folders
-cypress/e2e/pre-test/
 node_modules/
 /playwright-report/
 /playwright/.cache/
