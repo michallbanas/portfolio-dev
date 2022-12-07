@@ -14,7 +14,6 @@
     "lint-check": "eslint ./src/*.ts --ext .ts",
     "typescript": "tsc --watch",
     "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\"",
-    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
