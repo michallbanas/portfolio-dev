@@ -13,7 +13,7 @@
     "playwright-report": "npx playwright show-report ",
     "lint-check": "eslint ./src/*.ts --ext .ts",
     "typescript": "tsc --watch",
-    "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\"",
+    "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\""
   },
   "repository": {
     "type": "git",
