@@ -44,7 +44,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm install
     - name: Cypress run
-      uses: cypress-io/github-action@v4.2.0
+      uses: cypress-io/github-action@v5
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
@@ -68,7 +68,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm install
     - name: Cypress run
-      uses: cypress-io/github-action@v4.2.0
+      uses: cypress-io/github-action@v5
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
@@ -93,7 +93,7 @@ jobs:
     - run: npm install
     - run: npx playwright install-deps webkit
     - name: Cypress run
-      uses: cypress-io/github-action@v4.2.0
+      uses: cypress-io/github-action@v5
       with:
         start: npm run server
         wait-on: 'http://localhost:3000'
