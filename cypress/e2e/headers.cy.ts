@@ -7,7 +7,7 @@ describe("Test", () => {
   })
 
   it("should find title in </head> element and verify the text", () => {
-    cy.title().should("eq", "Michal Banaš - QA Engineer")
+    cy.title().should("eq", "Michal Banas - QA Engineer")
   })
 
   it("should find h1 and check it has correct text", () => {
@@ -26,11 +26,11 @@ describe("Test", () => {
   })
 
   it("should find h1, h2, check if they are have font family Raleway", () => {
-    cy.get("h2").spread((main, blog, photo, about) => {
+    cy.get("h2").spread((main, project, photo, about) => {
       expect(main).to.have.text("QA Engineer")
-      expect(blog).to.have.text("Blog")
-      expect(photo).to.have.text("Fotografia")
-      expect(about).to.have.text("O mne")
+      expect(project).to.have.text("Projects")
+      expect(photo).to.have.text("Photography")
+      expect(about).to.have.text("About me")
     })
 
     const filtEle: string[] = []
@@ -50,11 +50,11 @@ describe("Test", () => {
       .then(() => {
         expect(filtEle).to.deep.equal(sections)
       })
-      .spread((blogElement, photoElement, contactElement) => {
-        cy.wrap(sections).spread((blog, fotografia, oMne) => {
-          cy.wrap(blogElement).invoke("text").should("deep.equal", blog)
-          cy.wrap(photoElement).invoke("text").should("deep.equal", fotografia)
-          cy.wrap(contactElement).invoke("text").should("deep.equal", oMne)
+      .spread((projectElement, photoElement, contactElement) => {
+        cy.wrap(sections).spread((projects, photography, about) => {
+          cy.wrap(projectElement).invoke("text").should("deep.equal", projects)
+          cy.wrap(photoElement).invoke("text").should("deep.equal", photography)
+          cy.wrap(contactElement).invoke("text").should("deep.equal", about)
         })
       })
   })
