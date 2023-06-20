@@ -5,10 +5,16 @@
     "es2021": true
   },
   "parser": "@typescript-eslint/parser",
-  "extends": ["airbnb-base", "prettier", "eslint:recommended", "plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest"
-  }, 
+  },
   "rules": {
     "prettier/prettier": ["error"],
     "no-unused-vars": "off",

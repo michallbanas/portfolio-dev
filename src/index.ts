@@ -1,5 +1,3 @@
-/* Dark Mode at the Operating System Level */
-
 type DarkMode = {
   dark: string
   light: string
@@ -7,14 +5,14 @@ type DarkMode = {
 }
 
 const darkModeAtOperatingLeve = ({ dark, light, element }: DarkMode) => {
-  const darkMode: string = getComputedStyle(element).getPropertyValue('content')
-  return darkMode.includes('dark')
-    ? element.setAttribute('data-theme', dark)
-    : element.setAttribute('data-theme', light)
+  const darkMode: string = getComputedStyle(element).getPropertyValue("content")
+  return darkMode.includes("dark")
+    ? element.setAttribute("data-theme", dark)
+    : element.setAttribute("data-theme", light)
 }
 
 darkModeAtOperatingLeve({
-  dark: 'dark',
-  light: 'light',
+  dark: "dark",
+  light: "light",
   element: document.documentElement,
 })

@@ -1,4 +1,4 @@
-import { defineConfig } from 'cypress'
+import { defineConfig } from "cypress"
 
 export default defineConfig({
   defaultCommandTimeout: 6000,
@@ -10,8 +10,8 @@ export default defineConfig({
   viewportWidth: 1680,
   watchForFileChanges: false,
   e2e: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: "http://localhost:3000",
     experimentalWebKitSupport: true,
-    supportFile: 'cypress/support/index.ts',
+    supportFile: "cypress/support/index.ts",
   },
 })

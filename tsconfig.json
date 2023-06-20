@@ -1,25 +1,19 @@
 {
-    "compilerOptions": {
-      "baseUrl": "../node_modules",
-      "lib": ["es2020", "dom"],
-      "moduleResolution": "node",
-      "outDir":"public/app/",
-      "skipLibCheck": true,
-      "strict": true,
-      "target": "es2020",
-      "types": ["cypress", "node"]
-    },
-    "include": [
-      "src/*.ts"
-    ],
-    "exclude": [
-      "node_modules",
-      "cypress",
-      "playwright",
-    ],
-    "compileOnSave": true,
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
+  "compilerOptions": {
+    "baseUrl": "../node_modules",
+    "lib": ["es2020", "dom"],
+    "moduleResolution": "node",
+    "outDir": "public/app/",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2020",
+    "types": ["cypress", "node"]
+  },
+  "include": ["src/*.ts"],
+  "exclude": ["node_modules", "cypress", "playwright"],
+  "compileOnSave": true,
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   }
+}
