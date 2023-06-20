@@ -1,4 +1,4 @@
-import { checkLinksAreVisible } from './commands/checkingLinks'
+import { checkLinksAreVisible } from "./commands/checkingLinks"
 
 export {}
 declare global {
@@ -9,4 +9,4 @@ declare global {
   }
 }
 
-Cypress.Commands.add('checkLinksAreVisible', checkLinksAreVisible)
+Cypress.Commands.add("checkLinksAreVisible", checkLinksAreVisible)

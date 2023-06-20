@@ -1,40 +1,40 @@
 /* raleway-300 - latin-ext_latin */
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local(''), url('/public/fonts/raleway-v22-latin-ext_latin-300.woff2') format('woff2'),
+  src: local(""), url("/public/fonts/raleway-v22-latin-ext_latin-300.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/public/fonts/raleway-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("/public/fonts/raleway-v22-latin-ext_latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* open-sans-regular - latin-ext_latin */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''), url('/public/fonts/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'),
+  src: local(""), url("/public/fonts/open-sans-v27-latin-ext_latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/public/fonts/open-sans-v27-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      url("/public/fonts/open-sans-v27-latin-ext_latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* cookie-regular - latin */
 @font-face {
-  font-family: 'Cookie';
+  font-family: "Cookie";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(''), url('/public/fonts/cookie-v12-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/public/fonts/cookie-v12-latin-regular.woff')
-      format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("/public/fonts/cookie-v12-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/public/fonts/cookie-v12-latin-regular.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* Typography*/
 :root {
-  --font-primary: 'Open Sans', sans-serif;
-  --font-heading: 'Raleway', sans-serif;
+  --font-primary: "Open Sans", sans-serif;
+  --font-heading: "Raleway", sans-serif;
   --size-primary: 1rem;
   --size-secondary: 1.563rem;
   --size-heading: 4.768rem;
@@ -48,7 +48,7 @@
     --white-color: #f8f8f8;
   }
   html {
-    content: 'light';
+    content: "light";
   }
 }
 
@@ -62,7 +62,7 @@
       contrast(95%);
   }
   html {
-    content: 'dark';
+    content: "dark";
   }
 }
 
@@ -276,7 +276,7 @@ figure {
   background-color: var(--font-color);
   border-radius: 0.6rem;
   padding: 0.6rem 1.2rem;
-  font-family: 'Cookie', cursive;
+  font-family: "Cookie", cursive;
   font-size: 1.8rem;
 }
 
