@@ -2,11 +2,10 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es2021": true
+    "es2022": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "airbnb-base",
     "prettier",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
