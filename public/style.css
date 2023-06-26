@@ -268,9 +268,10 @@ figure {
   padding: 5vh 0;
 }
 
-.mail,
-.mail-c {
-  display: inline;
+.button-mail,
+.button-buy-me-a-coffee {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--white-color);
   background-color: var(--font-color);
@@ -280,7 +281,7 @@ figure {
   font-size: 1.8rem;
 }
 
-.bmc {
+.image-buy-me-a-coffee {
   height: 2rem;
   padding-right: 0.5rem;
   vertical-align: middle;
@@ -288,7 +289,7 @@ figure {
   filter: var(--black-filter);
 }
 
-.eml {
+.image-email {
   height: 1.8rem;
   padding-right: 0.5rem;
   vertical-align: middle;
