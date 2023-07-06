@@ -32,10 +32,13 @@ describe("Test", () => {
     })
 
     cy.log("Mail button should have correct text")
-    cy.get("[data-cy='mail']").should("be.visible").then((button) => {
+    cy.get("[data-cy='mail']")
+      .should("be.visible")
+      .then((button) => {
         const cleanText = button.text().replace(/\s+/g, " ").trim()
         return cleanText
-    }).and("eq", "Good old mail")
+      })
+      .and("eq", "Good old mail")
 
     cy.log("Mail image should have correct alt text")
     cy.get("[data-cy='mail'] img").should("have.attr", "alt", "link to send an email")
