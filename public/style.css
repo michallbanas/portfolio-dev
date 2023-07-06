@@ -4,7 +4,9 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local(""), url("/public/fonts/raleway-v22-latin-ext_latin-300.woff2") format("woff2"),
+  src:
+    local(""),
+    url("/public/fonts/raleway-v22-latin-ext_latin-300.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("/public/fonts/raleway-v22-latin-ext_latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -15,7 +17,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(""), url("/public/fonts/open-sans-v27-latin-ext_latin-regular.woff2") format("woff2"),
+  src:
+    local(""),
+    url("/public/fonts/open-sans-v27-latin-ext_latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("/public/fonts/open-sans-v27-latin-ext_latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -26,7 +30,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local(""), url("/public/fonts/cookie-v12-latin-regular.woff2") format("woff2"),
+  src:
+    local(""),
+    url("/public/fonts/cookie-v12-latin-regular.woff2") format("woff2"),
     /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/public/fonts/cookie-v12-latin-regular.woff")
       format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
@@ -273,7 +279,7 @@ figure {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--white-color);
+  color: black;
   background-color: var(--font-color);
   border-radius: 0.6rem;
   padding: 0.6rem 1.2rem;
