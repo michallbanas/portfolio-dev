@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: eslint
+    name: quality
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -31,7 +31,7 @@ jobs:
         run: npm run lint-check
 
   cypress-chrome:
-    name: cypress-chrome
+    name: test-cypress
     needs: build
     runs-on: ubuntu-latest
     strategy:
