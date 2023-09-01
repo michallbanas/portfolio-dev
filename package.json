@@ -7,7 +7,7 @@
     "dev": "browser-sync --server --files [\"index.html, public/style.css, public/app/*.js\"] --port 3000",
     "server": "browser-sync --server --no-open --port 3000",
     "test-cypress": "npx cypress open",
-    "test-cypress-headles": "cypress run",
+    "test-cypress-headless": "cypress run",
     "lint-check": "eslint ./src/*.ts --ext .ts",
     "typescript": "tsc --watch",
     "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\""
