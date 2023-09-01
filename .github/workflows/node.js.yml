@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -21,10 +21,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm install
-      - run: npm run lint-check
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build --if-present
+      - name: Install Dev Dependencies
+        run: npm install
+      - name: Lint Check
+        run: npm run lint-check
 
   cypress-chrome:
     name: cypress-chrome
@@ -32,7 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [14.x, 16.x, 18.x]
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -40,12 +45,27 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm install
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build --if-present
+      - name: Install Dev Dependencies
+        run: npm install
+      - name: Start Server
+        run: npm run server &
+      - name: Wait for Server
+        run: |
+          timeout=0
+          until [ $timeout -ge 60 ]
+          do
+            wget --spider http://localhost:3000 2>/dev/null
+            if [ $? -eq 0 ]; then
+              break
+            fi
+            sleep 5
+            timeout=$((timeout+5))
+          done
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          start: npm run server
-          wait-on: "http://localhost:3000"
-          browser: chrome
+          start: npm run cypress-start
