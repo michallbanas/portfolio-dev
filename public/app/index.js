@@ -1,13 +1,18 @@
 "use strict"
-
-const darkModeAtOperatingLeve = ({ dark, light, element }) => {
-  const darkMode = getComputedStyle(element).getPropertyValue("content")
-  return darkMode.includes("dark")
-    ? element.setAttribute("data-theme", dark)
-    : element.setAttribute("data-theme", light)
+function toggleDarkMode(mode) {
+  const element = document.documentElement
+  element.setAttribute(
+    "data-theme",
+    element.getAttribute("data-theme") === mode.dark ? mode.light : mode.dark,
+  )
 }
-darkModeAtOperatingLeve({
+const modeConfig = {
   dark: "dark",
   light: "light",
-  element: document.documentElement,
-})
+}
+const toggleButton = document.getElementById("toggle-button")
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    toggleDarkMode(modeConfig)
+  })
+}
