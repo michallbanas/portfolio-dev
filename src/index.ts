@@ -1,18 +1,26 @@
 type DarkMode = {
   dark: string
   light: string
-  element: HTMLElement
 }
 
-const darkModeAtOperatingLeve = ({ dark, light, element }: DarkMode) => {
-  const darkMode: string = getComputedStyle(element).getPropertyValue("content")
-  return darkMode.includes("dark")
-    ? element.setAttribute("data-theme", dark)
-    : element.setAttribute("data-theme", light)
+function toggleDarkMode(mode: DarkMode) {
+  const element = document.documentElement
+
+  element.setAttribute(
+    "data-theme",
+    element.getAttribute("data-theme") === mode.dark ? mode.light : mode.dark,
+  )
 }
 
-darkModeAtOperatingLeve({
+const modeConfig: DarkMode = {
   dark: "dark",
   light: "light",
-  element: document.documentElement,
-})
+}
+
+const toggleButton = document.getElementById("toggle-button")
+
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    toggleDarkMode(modeConfig)
+  })
+}
