@@ -279,12 +279,15 @@ figure {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: black;
   background-color: var(--font-color);
   border-radius: 0.6rem;
   padding: 0.6rem 1.2rem;
   font-family: "Cookie", cursive;
   font-size: 1.8rem;
+}
+
+.text-color {
+  color: var(--white-color);
 }
 
 .image-buy-me-a-coffee {
