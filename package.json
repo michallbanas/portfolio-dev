@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "dev": "browser-sync --server --files [\"index.html, public/style.css, public/app/*.js\"] --port 3000",
-    "server": "browser-sync --server --no-open --port 3000",
+    "server": "bun run --watch server.ts",
     "test-cypress": "npx cypress open",
     "test-cypress-headless": "cypress run",
     "lint-check": "eslint ./src/*.ts --ext .ts",
@@ -26,7 +25,6 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
-    "browser-sync": "^2.29.3",
     "cypress": "^13.5.1",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
@@ -34,9 +32,11 @@
     "eslint-plugin-prettier": "^5.0.1",
     "playwright-webkit": "^1.39.0",
     "prettier": "^3.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "bun-types": "latest"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "npm-check-updates": "^16.14.6"
   }
 }
