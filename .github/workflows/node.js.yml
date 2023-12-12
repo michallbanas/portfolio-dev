@@ -45,7 +45,7 @@ jobs:
       - name: Install Dependencies  
         run: npm install
       - name: Start Server
-        run: bun server.ts    
+        run: bun server   
       - name: Wait for server
         run: |
           timeout=0
