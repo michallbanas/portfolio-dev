@@ -10,7 +10,7 @@ export default defineConfig({
   viewportWidth: 1680,
   watchForFileChanges: false,
   e2e: {
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://localhost:3100",
     experimentalWebKitSupport: true,
     supportFile: "cypress/support/index.ts",
   },
