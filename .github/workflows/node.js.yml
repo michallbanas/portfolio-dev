@@ -58,7 +58,7 @@ jobs:
           timeout=0
           until [ $timeout -ge 60 ]
           do
-            wget --spider http://localhost:3000 2>/dev/null
+            wget --spider http://localhost:3100 2>/dev/null
             if [ $? -eq 0 ]; then
               break
             fi
