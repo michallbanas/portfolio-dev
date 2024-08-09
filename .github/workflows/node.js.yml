@@ -21,11 +21,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/bun.lockb') }}
       - name: Bun
         uses: oven-sh/setup-bun@v1
       - name: Install Dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
       - name: Start Server
         run: |
           timeout=0
@@ -48,7 +48,7 @@ jobs:
             timeout=$((timeout+5))
           done
       - name: Cypress info
-        run: npx cypress info
+        run: bunx cypress info
       - name: Cypress run
         uses: cypress-io/github-action@v6.7.2
         with:
