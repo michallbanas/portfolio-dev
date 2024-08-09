@@ -22,12 +22,12 @@
   "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
   "devDependencies": {
     "bun-types": "latest",
-    "cypress": "^13.8.1",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "cypress": "^13.13.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "express": "^4.19.2",
-    "npm-check-updates": "^16.14.20"
+    "npm-check-updates": "^17.0.6"
   }
 }
