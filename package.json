@@ -7,9 +7,7 @@
     "server": "bun run --watch server.ts",
     "test-cypress": "npx cypress open",
     "test-cypress-headless": "cypress run",
-    "lint-check": "eslint ./src/*.ts --ext .ts",
-    "typescript": "tsc --watch",
-    "lint-prettier": "eslint --fix --ext .js,.ts,.html,.css && prettier --write \"**/*.{js,ts,html,css}\""
+    "typescript": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -23,17 +21,10 @@
   },
   "homepage": "https://github.com/michallbanas/portfolio-dev#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
+    "bun-types": "latest",
     "cypress": "^13.8.1",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-cypress": "^3.0.3",
-    "eslint-plugin-prettier": "^5.1.3",
-    "playwright-webkit": "^1.43.1",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.5",
-    "bun-types": "latest"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "express": "^4.19.2",
