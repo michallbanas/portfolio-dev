@@ -20,10 +20,12 @@ jobs:
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.npm
+          path: ~/.bun
           key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/bun.lockb') }}
       - name: Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Install Dependencies
         run: bun install --frozen-lockfile
       - name: Start Server
@@ -50,7 +52,5 @@ jobs:
       - name: Cypress info
         run: bunx cypress info
       - name: Cypress run
-        uses: cypress-io/github-action@v6.7.2
-        with:
-          browser: chrome
+        run: bunx cypress run --browser chrome --headless
     
