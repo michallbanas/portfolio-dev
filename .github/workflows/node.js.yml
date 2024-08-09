@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Cypress Tests
 
 on:
   pull_request:
@@ -11,17 +11,9 @@ jobs:
   cypress-chrome:
     name: test-cypress
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.6]
 
     steps:
       - uses: actions/checkout@v4
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.bun
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/bun.lockb') }}
       - name: Bun
         uses: oven-sh/setup-bun@v2
         with:
