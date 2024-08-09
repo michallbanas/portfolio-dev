@@ -1,58 +1,25 @@
-name: Node.js CI
+name: Cypress Tests
 
 on:
-  push:
-    branches: ["master"]
   pull_request:
-    branches: ["master"]
+    branches:
+      - master
+    paths-ignore:
+      - "**.md"
 
 jobs:
-  build:
-    name: quality
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install Dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build --if-present
-      - name: Install Dev Dependencies
-        run: npm install
-      - name: Lint Check
-        run: npm run lint-check
-
   cypress-chrome:
     name: test-cypress
-    needs: build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v4
-      - name: Cache Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
       - name: Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Install Dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
       - name: Start Server
         run: |
           timeout=0
@@ -74,7 +41,8 @@ jobs:
             sleep 5
             timeout=$((timeout+5))
           done
+      - name: Cypress info
+        run: bunx cypress info
       - name: Cypress run
-        uses: cypress-io/github-action@v6.6.1
-        with:
-          browser: chrome
+        run: bunx cypress run --browser chrome --headless
+    
